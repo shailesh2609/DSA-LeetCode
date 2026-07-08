@@ -105,17 +105,8 @@ def parse_stats(user_data):
 # -----------------------------
 
 def progress_bar(current, goal, width=20):
-    """
-    Example:
-
-    ███████░░░░░░░░░░░░
-    """
-
-    percentage = min(current / goal, 1)
-
-    filled = int(width * percentage)
-
-    return "█" * filled + "░" * (width - filled)
+    filled = int((current / goal) * width)
+    return "🟩" * filled + "⬜" * (width - filled)
 
 
 # -----------------------------
@@ -124,7 +115,9 @@ def progress_bar(current, goal, width=20):
 
 def generate_markdown(stats):
 
-    percentage = (stats["total"] / GOAL) * 100
+    percentage = stats["total"] / GOAL * 100
+
+    bar = progress_bar(stats["total"], GOAL)
 
     markdown = f"""
     | Difficulty | Solved |
@@ -136,9 +129,9 @@ def generate_markdown(stats):
 
 ---
 
-## 🎯 Progress
+### 🎯 Progress
 
-<progress value="{stats['total']}" max="{GOAL}"></progress>
+{bar}
 
 **{stats['total']} / {GOAL} Problems ({percentage:.1f}%)**
 
