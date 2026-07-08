@@ -1,1 +1,28 @@
-{}
+{
+    "5": {
+        "title": "Longest Palindromic Substring",
+        "difficulty": "Medium",
+        "topics": [
+            "Two Pointers",
+            "String",
+            "Dynamic Programming"
+        ]
+    },
+    "1": {
+        "title": "Two Sum",
+        "difficulty": "Easy",
+        "topics": [
+            "Array",
+            "Hash Table"
+        ]
+    },
+    "3": {
+        "title": "Longest Substring Without Repeating Characters",
+        "difficulty": "Medium",
+        "topics": [
+            "Hash Table",
+            "String",
+            "Sliding Window"
+        ]
+    }
+}
