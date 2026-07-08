@@ -124,9 +124,9 @@ def progress_bar(current, goal, width=20):
 
 def generate_markdown(stats):
 
-    bar = progress_bar(stats["total"], GOAL)
+percentage = (stats["total"] / GOAL) * 100
 
-    markdown = f"""
+markdown = f"""
 | Difficulty | Solved |
 |------------|-------:|
 | 🟢 Easy | {stats['easy']} |
@@ -134,15 +134,21 @@ def generate_markdown(stats):
 | 🔴 Hard | {stats['hard']} |
 | ⭐ **Total** | **{stats['total']}** |
 
-### 🎯 Progress
+---
 
-{bar}
+## 🎯 Progress
 
-**{stats['total']} / {GOAL} Problems**
+<progress value="{stats['total']}" max="{GOAL}"></progress>
 
-### 🌍 Global Ranking
+**{stats['total']} / {GOAL} Problems ({percentage:.1f}%)**
 
-{stats['ranking']}
+---
+
+## 🌍 Global Ranking
+
+**{stats['ranking']:,}**
+
+---
 
 _Last Updated: {datetime.now(UTC).strftime("%d %b %Y %H:%M UTC")}_
 """
