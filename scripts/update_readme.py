@@ -332,9 +332,8 @@ def problem_distribution(cache):
 
     for topic, count in counter.most_common(10):
 
-        filled = int(count / max_count * BAR_LENGTH)
-
-        bar = "█" * filled + "░" * (BAR_LENGTH - filled)
+        filled = max(1, int(count / max_count * BAR_LENGTH))
+        bar = "█" * filled
 
         lines.append(
             f"{topic:<22} {bar}  {count}"
