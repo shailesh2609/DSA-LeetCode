@@ -145,7 +145,7 @@ def update_topic_cache():
 
     for folder in folders:
 
-    print(f"Processing folder: {folder}")
+        print(f"Processing folder: {folder}")
 
     pid = extract_problem_id(folder)
 
