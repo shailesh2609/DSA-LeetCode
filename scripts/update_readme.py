@@ -38,6 +38,20 @@ query getUserProfile($username: String!) {
 }
 """
 
+QUESTION_QUERY = """
+query questionData($titleSlug: String!) {
+  question(titleSlug: $titleSlug) {
+    questionFrontendId
+    title
+    difficulty
+
+    topicTags {
+      name
+    }
+  }
+}
+"""
+
 def load_cache():
     """
     Load cached LeetCode metadata.
