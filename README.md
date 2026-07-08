@@ -44,26 +44,31 @@
 ## 📚 Problem Distribution
 
 ```text
-String                ███████████████ 3
-Hash Table            ██████████      2
-Two Pointers          █████           1
-Dynamic Programming   █████           1
-Array                 █████           1
-Sliding Window        █████           1
+Array                 ███████████████ 10
+String                ████████████    8
+Two Pointers          ██████          4
+Hash Table            ██████          4
+Math                  ██████          4
+Binary Search         ██████          4
+Matrix                ████            3
+Sorting               ███             2
+Dynamic Programming   █               1
+Sliding Window        █               1
 ```
 
 ---
 
 ## 🔥 Recently Solved
 
-🟡 Longest Palindromic Substring<br>
-🟡 Zigzag Conversion<br>
-🟢 Two Sum<br>
-🟡 Longest Substring Without Repeating Characters<br>
+🟡 Integer to Roman<br>
+🟡 Group Anagrams<br>
+🟡 Spiral Matrix<br>
+🟢 Find the Index of the First Occurrence in a String<br>
+🟡 Search a 2D Matrix<br>
 
 ---
 
-_Last Updated: 08 Jul 2026 22:43 UTC_
+_Last Updated: 08 Jul 2026 22:56 UTC_
 
 <!-- LEETCODE_STATS_END -->
 

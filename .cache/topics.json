@@ -31,5 +31,124 @@
         "topics": [
             "String"
         ]
+    },
+    "12": {
+        "title": "Integer to Roman",
+        "difficulty": "Medium",
+        "topics": [
+            "Hash Table",
+            "Math",
+            "String"
+        ]
+    },
+    "49": {
+        "title": "Group Anagrams",
+        "difficulty": "Medium",
+        "topics": [
+            "Array",
+            "Hash Table",
+            "String",
+            "Sorting"
+        ]
+    },
+    "54": {
+        "title": "Spiral Matrix",
+        "difficulty": "Medium",
+        "topics": [
+            "Array",
+            "Matrix",
+            "Simulation"
+        ]
+    },
+    "28": {
+        "title": "Find the Index of the First Occurrence in a String",
+        "difficulty": "Easy",
+        "topics": [
+            "Two Pointers",
+            "String",
+            "String Matching"
+        ]
+    },
+    "74": {
+        "title": "Search a 2D Matrix",
+        "difficulty": "Medium",
+        "topics": [
+            "Array",
+            "Binary Search",
+            "Matrix"
+        ]
+    },
+    "34": {
+        "title": "Find First and Last Position of Element in Sorted Array",
+        "difficulty": "Medium",
+        "topics": [
+            "Array",
+            "Binary Search"
+        ]
+    },
+    "75": {
+        "title": "Sort Colors",
+        "difficulty": "Medium",
+        "topics": [
+            "Array",
+            "Two Pointers",
+            "Sorting"
+        ]
+    },
+    "7": {
+        "title": "Reverse Integer",
+        "difficulty": "Medium",
+        "topics": [
+            "Math"
+        ]
+    },
+    "69": {
+        "title": "Sqrt(x)",
+        "difficulty": "Easy",
+        "topics": [
+            "Math",
+            "Binary Search"
+        ]
+    },
+    "33": {
+        "title": "Search in Rotated Sorted Array",
+        "difficulty": "Medium",
+        "topics": [
+            "Array",
+            "Binary Search"
+        ]
+    },
+    "48": {
+        "title": "Rotate Image",
+        "difficulty": "Medium",
+        "topics": [
+            "Array",
+            "Math",
+            "Matrix"
+        ]
+    },
+    "26": {
+        "title": "Remove Duplicates from Sorted Array",
+        "difficulty": "Easy",
+        "topics": [
+            "Array",
+            "Two Pointers"
+        ]
+    },
+    "8": {
+        "title": "String to Integer (atoi)",
+        "difficulty": "Medium",
+        "topics": [
+            "String"
+        ]
+    },
+    "14": {
+        "title": "Longest Common Prefix",
+        "difficulty": "Easy",
+        "topics": [
+            "Array",
+            "String",
+            "Trie"
+        ]
     }
 }
