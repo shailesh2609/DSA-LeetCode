@@ -1,6 +1,6 @@
 import os
 import requests
-from datetime import datetime
+from datetime import datetime, UTC
 
 # -----------------------------
 # Configuration
@@ -144,7 +144,7 @@ def generate_markdown(stats):
 
 {stats['ranking']}
 
-_Last Updated: {datetime.utcnow().strftime("%d %b %Y %H:%M UTC")}_
+_Last Updated: {datetime.now(UTC).strftime("%d %b %Y %H:%M UTC")}_
 """
 
     return markdown
