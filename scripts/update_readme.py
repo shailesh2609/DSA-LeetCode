@@ -145,30 +145,32 @@ def update_topic_cache():
 
     for folder in folders:
 
-        pid = extract_problem_id(folder)
+    print(f"Processing folder: {folder}")
 
-        if pid in cache:
-            continue
+    pid = extract_problem_id(folder)
 
-        print(f"Fetching {folder}")
+    if pid in cache:
+        print(f"Already cached: {pid}")
+        continue
 
-        metadata = fetch_problem_metadata(
-            folder_to_slug(folder)
-        )
+    print(f"Fetching metadata for: {folder}")
 
-        cache[pid] = {
+    metadata = fetch_problem_metadata(
+        folder_to_slug(folder)
+    )
 
-            "title": metadata["title"],
+    print(metadata)
 
-            "difficulty": metadata["difficulty"],
+    cache[pid] = {
+        "title": metadata["title"],
+        "difficulty": metadata["difficulty"],
+        "topics": [
+            tag["name"]
+            for tag in metadata["topicTags"]
+        ]
+    }
 
-            "topics": [
-                tag["name"]
-                for tag in metadata["topicTags"]
-            ]
-        }
-
-        updated = True
+    updated = True
 
     if updated:
         save_cache(cache)
