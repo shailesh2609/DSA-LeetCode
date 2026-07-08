@@ -128,7 +128,52 @@ def fetch_problem_metadata(slug):
 
     return data["data"]["question"]
 
+from utils import (
+    get_problem_folders,
+    extract_problem_id,
+    folder_to_slug,
+)
 
+
+def update_topic_cache():
+
+    cache = load_cache()
+
+    folders = get_problem_folders()
+
+    updated = False
+
+    for folder in folders:
+
+        pid = extract_problem_id(folder)
+
+        if pid in cache:
+            continue
+
+        print(f"Fetching {folder}")
+
+        metadata = fetch_problem_metadata(
+            folder_to_slug(folder)
+        )
+
+        cache[pid] = {
+
+            "title": metadata["title"],
+
+            "difficulty": metadata["difficulty"],
+
+            "topics": [
+                tag["name"]
+                for tag in metadata["topicTags"]
+            ]
+        }
+
+        updated = True
+
+    if updated:
+        save_cache(cache)
+
+    return cache
 
 # -----------------------------
 # Parse Response
@@ -304,6 +349,8 @@ def main():
     user = fetch_leetcode_stats(USERNAME)
 
     stats = parse_stats(user)
+    
+    cache = update_topic_cache()
 
     markdown = generate_markdown(stats)
 
