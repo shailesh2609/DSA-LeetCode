@@ -1,8 +1,15 @@
 import os
 import json
 import requests
-from utils import *
 from datetime import datetime, UTC
+
+from utils import (
+    get_problem_folders,
+    extract_problem_id,
+    folder_to_slug,
+    get_last_commit_timestamp,
+    problem_title,
+)
 
 CACHE_DIR = ".cache"
 CACHE_FILE = os.path.join(CACHE_DIR, "topics.json")
@@ -128,13 +135,6 @@ def fetch_problem_metadata(slug):
 
     return data["data"]["question"]
 
-from utils import (
-    get_problem_folders,
-    extract_problem_id,
-    folder_to_slug,
-)
-
-
 def update_topic_cache():
 
     cache = load_cache()
@@ -218,13 +218,12 @@ def parse_stats(user_data):
 def progress_bar(current, goal, width=20):
     filled = int((current / goal) * width)
     return "🟩" * filled + "⬜" * (width - filled)
-
-
+  
 # -----------------------------
 # Markdown Generator
 # -----------------------------
 
-def generate_markdown(stats):
+def generate_markdown(stats, cache):
 
     percentage = stats["total"] / GOAL * 100
 
@@ -254,18 +253,19 @@ def generate_markdown(stats):
 
 ---
 
+{render_topic_distribution(cache)}
+
+---
+
 {recently_solved()}
+
+---
 
 _Last Updated: {datetime.now(UTC).strftime("%d %b %Y %H:%M UTC")}_
 """
 
     return markdown
 
-from utils import (
-    get_problem_folders,
-    get_last_commit_timestamp,
-    problem_title,
-)
 
 def recently_solved(limit=5):
     """
@@ -286,6 +286,46 @@ def recently_solved(limit=5):
 
     for folder in latest:
         lines.append(f"✅ {problem_title(folder)}")
+
+    return "\n".join(lines)
+
+from collections import Counter
+
+def topic_distribution(cache):
+    """
+    Count how many problems belong to each topic.
+    """
+
+    counter = Counter()
+
+    for problem in cache.values():
+
+        for topic in problem["topics"]:
+
+            counter[topic] += 1
+
+    return counter
+
+def render_topic_distribution(cache):
+
+    topics = topic_distribution(cache)
+
+    if not topics:
+        return "## 📚 Problem Distribution\n\nNo data available."
+
+    max_count = max(topics.values())
+
+    lines = ["## 📚 Problem Distribution", ""]
+
+    for topic, count in topics.most_common():
+
+        blocks = max(1, round(count / max_count * 15))
+
+        bar = "█" * blocks
+
+        lines.append(
+            f"{topic:<22} {bar:<15} {count}"
+        )
 
     return "\n".join(lines)
   
@@ -352,7 +392,7 @@ def main():
     
     cache = update_topic_cache()
 
-    markdown = generate_markdown(stats)
+    markdown = generate_markdown(stats, cache)
 
     update_readme(markdown)
 
