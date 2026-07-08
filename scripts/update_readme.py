@@ -103,6 +103,32 @@ def fetch_leetcode_stats(username: str):
 
     return data["data"]["matchedUser"]
 
+def fetch_problem_metadata(slug):
+    """
+    Fetch metadata for a single problem.
+    """
+
+    response = requests.post(
+        GRAPHQL_URL,
+        json={
+            "query": QUESTION_QUERY,
+            "variables": {
+                "titleSlug": slug
+            }
+        },
+        timeout=30,
+    )
+
+    response.raise_for_status()
+
+    data = response.json()
+
+    if "errors" in data:
+        raise Exception(data["errors"])
+
+    return data["data"]["question"]
+
+
 
 # -----------------------------
 # Parse Response
