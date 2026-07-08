@@ -148,3 +148,83 @@ _Last Updated: {datetime.utcnow().strftime("%d %b %Y %H:%M UTC")}_
 """
 
     return markdown
+# -----------------------------
+# README Updater
+# -----------------------------
+
+START_MARKER = "<!-- LEETCODE_STATS_START -->"
+END_MARKER = "<!-- LEETCODE_STATS_END -->"
+
+
+def update_readme(markdown):
+    """
+    Replace everything between the markers
+    in README.md with freshly generated markdown.
+    """
+
+    readme_path = "README.md"
+
+    with open(readme_path, "r", encoding="utf-8") as file:
+        content = file.read()
+
+    start = content.find(START_MARKER)
+    end = content.find(END_MARKER)
+
+    if start == -1 or end == -1:
+        raise Exception(
+            "README markers not found.\n"
+            "Please add:\n"
+            "<!-- LEETCODE_STATS_START -->\n"
+            "<!-- LEETCODE_STATS_END -->"
+        )
+
+    start += len(START_MARKER)
+
+    new_content = (
+        content[:start]
+        + "\n\n"
+        + markdown
+        + "\n"
+        + content[end:]
+    )
+
+    with open(readme_path, "w", encoding="utf-8") as file:
+        file.write(new_content)
+
+
+# -----------------------------
+# Main
+# -----------------------------
+
+def main():
+
+    if not USERNAME:
+        raise Exception(
+            "Repository Variable LEETCODE_USERNAME not found."
+        )
+
+    print(f"Fetching LeetCode stats for {USERNAME}...")
+
+    user = fetch_leetcode_stats(USERNAME)
+
+    stats = parse_stats(user)
+
+    markdown = generate_markdown(stats)
+
+    update_readme(markdown)
+
+    print("README updated successfully.")
+
+
+# -----------------------------
+# Entry Point
+# -----------------------------
+
+if __name__ == "__main__":
+    try:
+        main()
+
+    except Exception as e:
+        print("ERROR:")
+        print(e)
+        raise
