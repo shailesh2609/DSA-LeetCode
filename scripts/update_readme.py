@@ -124,7 +124,7 @@ def progress_bar(current, goal, width=20):
 
 def generate_markdown(stats):
 
-percentage = (stats["total"] / GOAL) * 100
+    percentage = (stats["total"] / GOAL) * 100
 
 markdown = f"""
 | Difficulty | Solved |
