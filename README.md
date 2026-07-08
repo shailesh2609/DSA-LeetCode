@@ -54,13 +54,13 @@ Sliding Window         ███████         1
 
 ## 🔥 Recently Solved
 
-🟡 Longest Palindromic Substring
-🟢 Two Sum
-🟡 Longest Substring Without Repeating Characters
+- 🟡 Longest Palindromic Substring
+- 🟢 Two Sum
+- 🟡 Longest Substring Without Repeating Characters
 
 ---
 
-_Last Updated: 08 Jul 2026 22:03 UTC_
+_Last Updated: 08 Jul 2026 22:08 UTC_
 
 <!-- LEETCODE_STATS_END -->
 
