@@ -304,8 +304,6 @@ def recently_solved(cache, limit=5):
     
 from collections import Counter
 
-from collections import Counter
-
 def problem_distribution(cache):
     """
     Generates a clean markdown table showing
@@ -330,18 +328,19 @@ def problem_distribution(cache):
         "```text"
     ]
 
+    max_topic_length = max(len(topic) for topic in counter.keys())
+
     for topic, count in counter.most_common(10):
 
         filled = max(1, int(count / max_count * BAR_LENGTH))
+
         bar = "█" * filled
 
         lines.append(
-            f"{topic:<22} {bar}  {count}"
+            f"{topic:<{max_topic_length}}   {bar:<15} {count}"
         )
 
-    lines.append("```")
-
-    return "\n".join(lines)
+        return "\n".join(lines)
     
 def topic_distribution(cache):
     """
