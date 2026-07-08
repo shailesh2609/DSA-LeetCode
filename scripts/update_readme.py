@@ -253,11 +253,11 @@ def generate_markdown(stats, cache):
 
 ---
 
-{render_topic_distribution(cache)}
+{problem_distribution(cache)}
 
 ---
 
-{recently_solved()}
+{recently_solved(cache)}
 
 ---
 
@@ -267,30 +267,74 @@ _Last Updated: {datetime.now(UTC).strftime("%d %b %Y %H:%M UTC")}_
     return markdown
 
 
-def recently_solved(limit=5):
-    """
-    Returns the most recently solved problems
-    using Git commit history.
-    """
+def recently_solved(cache, limit=5):
 
     folders = get_problem_folders()
 
     folders.sort(
         key=get_last_commit_timestamp,
-        reverse=True,
+        reverse=True
     )
 
-    latest = folders[:limit]
+    lines = [
+        "## 🔥 Recently Solved",
+        ""
+    ]
 
-    lines = ["## 🔥 Recently Solved", ""]
+    for folder in folders[:limit]:
 
-    for folder in latest:
-        lines.append(f"✅ {problem_title(folder)}")
+        pid = extract_problem_id(folder)
+
+        data = cache.get(pid)
+
+        if not data:
+            continue
+
+        difficulty = data["difficulty"]
+
+        icon = {
+            "Easy": "🟢",
+            "Medium": "🟡",
+            "Hard": "🔴"
+        }.get(difficulty, "⚪")
+
+        lines.append(f"{icon} {data['title']}")
 
     return "\n".join(lines)
-
+    
 from collections import Counter
 
+def problem_distribution(cache):
+    """
+    Generates a nicely formatted topic distribution.
+    """
+
+    counter = Counter()
+
+    for problem in cache.values():
+        for topic in problem["topics"]:
+            counter[topic] += 1
+
+    if not counter:
+        return "## 📚 Problem Distribution\n\nNo data yet."
+
+    max_count = max(counter.values())
+
+    lines = [
+        "## 📚 Problem Distribution",
+        ""
+    ]
+
+    for topic, count in counter.most_common(10):
+
+        bar = "█" * int((count / max_count) * 15)
+
+        lines.append(
+            f"{topic:<22} {bar:<15} {count}"
+        )
+
+    return "\n".join(lines)
+    
 def topic_distribution(cache):
     """
     Count how many problems belong to each topic.
@@ -306,28 +350,6 @@ def topic_distribution(cache):
 
     return counter
 
-def render_topic_distribution(cache):
-
-    topics = topic_distribution(cache)
-
-    if not topics:
-        return "## 📚 Problem Distribution\n\nNo data available."
-
-    max_count = max(topics.values())
-
-    lines = ["## 📚 Problem Distribution", ""]
-
-    for topic, count in topics.most_common():
-
-        blocks = max(1, round(count / max_count * 15))
-
-        bar = "█" * blocks
-
-        lines.append(
-            f"{topic:<22} {bar:<15} {count}"
-        )
-
-    return "\n".join(lines)
   
 # -----------------------------
 # README Updater
