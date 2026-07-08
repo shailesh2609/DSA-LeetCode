@@ -21,6 +21,19 @@ def extract_problem_id(folder):
 
     return None
 
+def folder_to_slug(folder):
+    """
+    Example:
+
+    3-longest-substring-without-repeating-characters
+
+    →
+
+    longest-substring-without-repeating-characters
+    """
+
+    return folder.split("-", 1)[1]
+
 def get_last_commit_timestamp(folder):
     """
     Returns the Unix timestamp of the latest commit
