@@ -5,24 +5,30 @@
 <!-- LEETCODE_STATS_START -->
 
 
-| Difficulty | Solved |
-|------------|-------:|
-| 🟢 Easy | 24 |
-| 🟡 Medium | 33 |
-| 🔴 Hard | 0 |
-| ⭐ **Total** | **57** |
+    | Difficulty | Solved |
+    |------------|-------:|
+    | 🟢 Easy | 24 |
+    | 🟡 Medium | 33 |
+    | 🔴 Hard | 0 |
+    | ⭐ **Total** | **57** |
 
-### 🎯 Progress
+---
 
-██░░░░░░░░░░░░░░░░░░
+## 🎯 Progress
 
-**57 / 500 Problems**
+<progress value="57" max="500"></progress>
 
-### 🌍 Global Ranking
+**57 / 500 Problems (11.4%)**
 
-2364529
+---
 
-_Last Updated: 08 Jul 2026 16:46 UTC_
+## 🌍 Global Ranking
+
+**2,364,529**
+
+---
+
+_Last Updated: 08 Jul 2026 17:14 UTC_
 
 <!-- LEETCODE_STATS_END -->
 
