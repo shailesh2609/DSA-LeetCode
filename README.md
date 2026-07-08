@@ -45,22 +45,22 @@
 
 String                 ███████████████ 2
 Hash Table             ███████████████ 2
-Two Pointers           ████████        1
-Dynamic Programming    ████████        1
-Array                  ████████        1
-Sliding Window         ████████        1
+Two Pointers           ███████         1
+Dynamic Programming    ███████         1
+Array                  ███████         1
+Sliding Window         ███████         1
 
 ---
 
 ## 🔥 Recently Solved
 
-✅ Longest Palindromic Substring
-✅ Two Sum
-✅ Longest Substring Without Repeating Characters
+🟡 Longest Palindromic Substring
+🟢 Two Sum
+🟡 Longest Substring Without Repeating Characters
 
 ---
 
-_Last Updated: 08 Jul 2026 21:47 UTC_
+_Last Updated: 08 Jul 2026 22:03 UTC_
 
 <!-- LEETCODE_STATS_END -->
 
