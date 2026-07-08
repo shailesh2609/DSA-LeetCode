@@ -1,9 +1,17 @@
 # 🚀 DSA-LeetCode
-![Language](https://img.shields.io/badge/Language-C%2B%2B-blue?style=for-the-badge)  ![LeetCode](https://img.shields.io/badge/LeetCode-57%20Solved-orange?style=for-the-badge)
+<p align="center">
 
-![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-Automated-success?style=for-the-badge)
+<img src="https://img.shields.io/badge/C%2B%2B-17-blue?style=for-the-badge&logo=c%2B%2B" />
 
-![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
+<img src="https://img.shields.io/badge/LeetCode-57%20Solved-orange?style=for-the-badge&logo=leetcode" />
+
+<img src="https://img.shields.io/badge/GitHub-Actions-success?style=for-the-badge&logo=githubactions" />
+
+<img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" />
+
+</p>
+
+---
 
 # 📊 LeetCode Statistics
 
