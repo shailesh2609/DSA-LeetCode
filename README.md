@@ -1,7 +1,7 @@
 # 🚀 DSA-LeetCode
 <p align="center">
 
-<img src="https://img.shields.io/badge/C%2B%2B-17-blue?style=for-the-badge&logo=c%2B%2B" />
+<img src="https://img.shields.io/badge/C%2B%2B-blue?style=for-the-badge&logo=c%2B%2B" />
 
 <img src="https://img.shields.io/badge/LeetCode-57%20Solved-orange?style=for-the-badge&logo=leetcode" />
 
@@ -77,7 +77,7 @@ _Last Updated: 08 Jul 2026 22:56 UTC_
 
 # 💻 Language
 
-- C++
+ C++
 
 ---
 
