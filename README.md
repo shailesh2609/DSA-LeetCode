@@ -1,4 +1,6 @@
-# 🚀 DSA-LeetCode
+<h1 align="center">
+🚀 DSA-LeetCode
+</h1>
 <p align="center">
 
 <img src="https://img.shields.io/badge/C%2B%2B-blue?style=for-the-badge&logo=c%2B%2B" />
