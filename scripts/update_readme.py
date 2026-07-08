@@ -119,7 +119,7 @@ def generate_markdown(stats):
 
     bar = progress_bar(stats["total"], GOAL)
 
-markdown = f"""
+    markdown = f"""
 | Difficulty | Solved |
 |------------|-------:|
 | 🟢 Easy | {stats['easy']} |
