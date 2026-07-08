@@ -24,5 +24,12 @@
             "String",
             "Sliding Window"
         ]
+    },
+    "6": {
+        "title": "Zigzag Conversion",
+        "difficulty": "Medium",
+        "topics": [
+            "String"
+        ]
     }
 }

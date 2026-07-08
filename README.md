@@ -44,12 +44,12 @@
 ## 📚 Problem Distribution
 
 ```text
-String                ███████████████ 2
-Hash Table            ███████████████ 2
-Two Pointers          ███████         1
-Dynamic Programming   ███████         1
-Array                 ███████         1
-Sliding Window        ███████         1
+String                ███████████████ 3
+Hash Table            ██████████      2
+Two Pointers          █████           1
+Dynamic Programming   █████           1
+Array                 █████           1
+Sliding Window        █████           1
 ```
 
 ---
@@ -57,12 +57,13 @@ Sliding Window        ███████         1
 ## 🔥 Recently Solved
 
 🟡 Longest Palindromic Substring<br>
+🟡 Zigzag Conversion<br>
 🟢 Two Sum<br>
 🟡 Longest Substring Without Repeating Characters<br>
 
 ---
 
-_Last Updated: 08 Jul 2026 22:36 UTC_
+_Last Updated: 08 Jul 2026 22:43 UTC_
 
 <!-- LEETCODE_STATS_END -->
 
