@@ -1,5 +1,6 @@
 import os
 import requests
+from utils import *
 from datetime import datetime, UTC
 
 # -----------------------------
@@ -143,10 +144,32 @@ def generate_markdown(stats):
 
 ---
 
+{recently_solved()}
+
 _Last Updated: {datetime.now(UTC).strftime("%d %b %Y %H:%M UTC")}_
 """
 
     return markdown
+
+def recently_solved(limit=5):
+
+    folders = get_problem_folders()
+
+    folders.sort(
+        key=problem_number,
+        reverse=True
+    )
+
+    latest = folders[:limit]
+
+    text = "## 🔥 Recently Solved\n\n"
+
+    for folder in latest:
+
+        text += f"✅ {problem_title(folder)}\n\n"
+
+    return text
+  
 # -----------------------------
 # README Updater
 # -----------------------------
