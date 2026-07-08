@@ -151,24 +151,33 @@ _Last Updated: {datetime.now(UTC).strftime("%d %b %Y %H:%M UTC")}_
 
     return markdown
 
+from utils import (
+    get_problem_folders,
+    get_last_commit_timestamp,
+    problem_title,
+)
+
 def recently_solved(limit=5):
+    """
+    Returns the most recently solved problems
+    using Git commit history.
+    """
 
     folders = get_problem_folders()
 
     folders.sort(
-        key=problem_number,
-        reverse=True
+        key=get_last_commit_timestamp,
+        reverse=True,
     )
 
     latest = folders[:limit]
 
-    text = "## 🔥 Recently Solved\n\n"
+    lines = ["## 🔥 Recently Solved", ""]
 
     for folder in latest:
+        lines.append(f"✅ {problem_title(folder)}")
 
-        text += f"✅ {problem_title(folder)}\n\n"
-
-    return text
+    return "\n".join(lines)
   
 # -----------------------------
 # README Updater
