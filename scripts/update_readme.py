@@ -304,9 +304,12 @@ def recently_solved(cache, limit=5):
     
 from collections import Counter
 
+from collections import Counter
+
 def problem_distribution(cache):
     """
-    Generates a nicely formatted topic distribution.
+    Generates a clean markdown table showing
+    the distribution of solved problems by topic.
     """
 
     counter = Counter()
@@ -316,22 +319,28 @@ def problem_distribution(cache):
             counter[topic] += 1
 
     if not counter:
-        return "## 📚 Problem Distribution\n\nNo data yet."
+        return "## 📚 Problem Distribution\n\n_No data available._"
 
     max_count = max(counter.values())
+    BAR_LENGTH = 15
 
     lines = [
         "## 📚 Problem Distribution",
-        ""
+        "",
+        "```text"
     ]
 
     for topic, count in counter.most_common(10):
 
-        bar = "█" * int((count / max_count) * 15)
+        filled = int(count / max_count * BAR_LENGTH)
+
+        bar = "█" * filled + "░" * (BAR_LENGTH - filled)
 
         lines.append(
-            f"{topic:<22} {bar:<15} {count}"
+            f"{topic:<22} {bar}  {count}"
         )
+
+    lines.append("```")
 
     return "\n".join(lines)
     
