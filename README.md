@@ -10,7 +10,25 @@ Solutions are automatically synchronized using **LeetSync**.
 
 <!-- LEETCODE_STATS_START -->
 
-Loading...
+
+| Difficulty | Solved |
+|------------|-------:|
+| 🟢 Easy | 24 |
+| 🟡 Medium | 33 |
+| 🔴 Hard | 0 |
+| ⭐ **Total** | **57** |
+
+### 🎯 Progress
+
+██░░░░░░░░░░░░░░░░░░
+
+**57 / 500 Problems**
+
+### 🌍 Global Ranking
+
+2364529
+
+_Last Updated: 08 Jul 2026 16:46 UTC_
 
 <!-- LEETCODE_STATS_END -->
 
