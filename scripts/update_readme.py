@@ -126,13 +126,13 @@ def generate_markdown(stats):
 
     percentage = (stats["total"] / GOAL) * 100
 
-markdown = f"""
-| Difficulty | Solved |
-|------------|-------:|
-| 🟢 Easy | {stats['easy']} |
-| 🟡 Medium | {stats['medium']} |
-| 🔴 Hard | {stats['hard']} |
-| ⭐ **Total** | **{stats['total']}** |
+    markdown = f"""
+    | Difficulty | Solved |
+    |------------|-------:|
+    | 🟢 Easy | {stats['easy']} |
+    | 🟡 Medium | {stats['medium']} |
+    | 🔴 Hard | {stats['hard']} |
+    | ⭐ **Total** | **{stats['total']}** |
 
 ---
 
