@@ -41,11 +41,21 @@
 
 ---
 
+## 📚 Problem Distribution
+
+Hash Table             ███████████████ 1
+String                 ███████████████ 1
+Sliding Window         ███████████████ 1
+
+---
+
 ## 🔥 Recently Solved
 
 ✅ Longest Substring Without Repeating Characters
 
-_Last Updated: 08 Jul 2026 20:32 UTC_
+---
+
+_Last Updated: 08 Jul 2026 21:12 UTC_
 
 <!-- LEETCODE_STATS_END -->
 
