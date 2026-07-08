@@ -1,7 +1,5 @@
 # 🚀 DSA-LeetCode
-![Language](https://img.shields.io/badge/Language-C%2B%2B-blue?style=for-the-badge)
-
-![LeetCode](https://img.shields.io/badge/LeetCode-57%20Solved-orange?style=for-the-badge)
+![Language](https://img.shields.io/badge/Language-C%2B%2B-blue?style=for-the-badge)  ![LeetCode](https://img.shields.io/badge/LeetCode-57%20Solved-orange?style=for-the-badge)
 
 ![GitHub Actions](https://img.shields.io/badge/GitHub%20Actions-Automated-success?style=for-the-badge)
 
