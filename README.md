@@ -14,9 +14,9 @@
 
 ---
 
-## 🎯 Progress
+### 🎯 Progress
 
-<progress value="57" max="500"></progress>
+🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
 **57 / 500 Problems (11.4%)**
 
@@ -28,7 +28,7 @@
 
 ---
 
-_Last Updated: 08 Jul 2026 17:14 UTC_
+_Last Updated: 08 Jul 2026 17:19 UTC_
 
 <!-- LEETCODE_STATS_END -->
 
