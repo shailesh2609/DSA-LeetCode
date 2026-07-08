@@ -3,6 +3,24 @@ import re
 import subprocess
 from pathlib import Path
 
+def extract_problem_id(folder):
+    """
+    Example:
+
+    3-longest-substring-without-repeating-characters
+
+    →
+
+    3
+    """
+
+    match = re.match(r"(\d+)", folder)
+
+    if match:
+        return match.group(1)
+
+    return None
+
 def get_last_commit_timestamp(folder):
     """
     Returns the Unix timestamp of the latest commit
