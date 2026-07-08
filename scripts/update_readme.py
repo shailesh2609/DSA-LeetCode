@@ -72,11 +72,10 @@ def load_cache():
 
 
 def save_cache(cache):
-    """
-    Save cache back to disk.
-    """
-
     os.makedirs(CACHE_DIR, exist_ok=True)
+
+    print("Saving cache:")
+    print(json.dumps(cache, indent=2))
 
     with open(CACHE_FILE, "w", encoding="utf-8") as f:
         json.dump(cache, f, indent=4)
