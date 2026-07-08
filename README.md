@@ -5,12 +5,12 @@
 <!-- LEETCODE_STATS_START -->
 
 
-    | Difficulty | Solved |
-    |------------|-------:|
-    | 🟢 Easy | 24 |
-    | 🟡 Medium | 33 |
-    | 🔴 Hard | 0 |
-    | ⭐ **Total** | **57** |
+| Difficulty | Solved |
+|------------|-------:|
+| 🟢 Easy | 24 |
+| 🟡 Medium | 33 |
+| 🔴 Hard | 0 |
+| ⭐ **Total** | **57** |
 
 ---
 
@@ -28,7 +28,7 @@
 
 ---
 
-_Last Updated: 08 Jul 2026 17:19 UTC_
+_Last Updated: 08 Jul 2026 17:26 UTC_
 
 <!-- LEETCODE_STATS_END -->
 
