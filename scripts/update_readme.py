@@ -298,7 +298,7 @@ def recently_solved(cache, limit=5):
             "Hard": "🔴"
         }.get(difficulty, "⚪")
 
-        lines.append(f"- {icon} {data['title']}")
+        lines.append(f"{icon} {data['title']}<br>")
 
     return "\n".join(lines)
     
