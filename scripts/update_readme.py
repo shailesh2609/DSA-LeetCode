@@ -340,7 +340,11 @@ def problem_distribution(cache):
             f"{topic:<{max_topic_length}}   {bar:<15} {count}"
         )
 
-        return "\n".join(lines)
+    # Close the code block
+    lines.append("```")
+
+    # Return AFTER processing all topics
+    return "\n".join(lines)
     
 def topic_distribution(cache):
     """
