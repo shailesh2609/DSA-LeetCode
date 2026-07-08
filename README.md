@@ -41,7 +41,13 @@
 
 ---
 
-_Last Updated: 08 Jul 2026 17:26 UTC_
+## 🔥 Recently Solved
+
+✅ Longest Substring Without Repeating Characters
+
+
+
+_Last Updated: 08 Jul 2026 20:06 UTC_
 
 <!-- LEETCODE_STATS_END -->
 
