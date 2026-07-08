@@ -3,6 +3,27 @@ import re
 import subprocess
 from pathlib import Path
 
+def get_problem_folders():
+    """
+    Returns all LeetCode problem folders.
+    """
+
+    folders = []
+
+    for item in os.listdir("."):
+
+        if os.path.isdir(item):
+
+            if item.startswith("."):
+                continue
+
+            if item in ["scripts", "__pycache__"]:
+                continue
+
+            folders.append(item)
+
+    return folders
+
 def extract_problem_id(folder):
     """
     Example:
@@ -65,27 +86,6 @@ def get_last_commit_timestamp(folder):
 
     return 0
     
-def get_problem_folders():
-    """
-    Returns all LeetCode problem folders.
-    """
-
-    folders = []
-
-    for item in os.listdir("."):
-
-        if os.path.isdir(item):
-
-            if item.startswith("."):
-                continue
-
-            if item in ["scripts", "__pycache__"]:
-                continue
-
-            folders.append(item)
-
-    return folders
-
 
 def problem_number(folder):
     """
