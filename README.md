@@ -44,13 +44,7 @@
 ## 📚 Problem Distribution
 
 ```text
-String                 ███████████████  2
-Hash Table             ███████████████  2
-Two Pointers           ███████  1
-Dynamic Programming    ███████  1
-Array                  ███████  1
-Sliding Window         ███████  1
-```
+String                ███████████████ 2
 
 ---
 
@@ -62,7 +56,7 @@ Sliding Window         ███████  1
 
 ---
 
-_Last Updated: 08 Jul 2026 22:23 UTC_
+_Last Updated: 08 Jul 2026 22:29 UTC_
 
 <!-- LEETCODE_STATS_END -->
 
