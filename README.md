@@ -39,23 +39,23 @@
 
 ## 🌍 Global Ranking
 
-**2,364,529**
+**2,366,467**
 
 ---
 
 ## 📚 Problem Distribution
 
 ```text
-Array                 ███████████████ 10
-String                ████████████    8
-Two Pointers          ██████          4
-Hash Table            ██████          4
-Math                  ██████          4
-Binary Search         ██████          4
-Matrix                ████            3
-Sorting               ███             2
-Dynamic Programming   █               1
-Sliding Window        █               1
+String                  ███████████████ 28
+Array                   ██████████████  27
+Two Pointers            ████████        15
+Hash Table              ██████          13
+Binary Search           █████           11
+Math                    █████           10
+Sorting                 ████            9
+Matrix                  ██              5
+Simulation              ██              5
+Stack                   ██              4
 ```
 
 ---
@@ -63,14 +63,14 @@ Sliding Window        █               1
 ## 🔥 Recently Solved
 
 🟡 Integer to Roman<br>
+🟡 Minimum Time Difference<br>
 🟡 Group Anagrams<br>
 🟡 Spiral Matrix<br>
-🟢 Find the Index of the First Occurrence in a String<br>
-🟡 Search a 2D Matrix<br>
+🟢 Maximum Average Subarray I<br>
 
 ---
 
-_Last Updated: 09 Jul 2026 01:55 UTC_
+_Last Updated: 09 Jul 2026 20:03 UTC_
 
 <!-- LEETCODE_STATS_END -->
 
