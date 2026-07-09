@@ -469,5 +469,36 @@
             "Hash Table",
             "String"
         ]
+    },
+    "179": {
+        "title": "Largest Number",
+        "difficulty": "Medium",
+        "topics": [
+            "Array",
+            "String",
+            "Greedy",
+            "Sorting"
+        ]
+    },
+    "189": {
+        "title": "Rotate Array",
+        "difficulty": "Medium",
+        "topics": [
+            "Array",
+            "Math",
+            "Two Pointers"
+        ]
+    },
+    "268": {
+        "title": "Missing Number",
+        "difficulty": "Easy",
+        "topics": [
+            "Array",
+            "Hash Table",
+            "Math",
+            "Binary Search",
+            "Bit Manipulation",
+            "Sorting"
+        ]
     }
 }

@@ -46,13 +46,13 @@
 ## 📚 Problem Distribution
 
 ```text
-String                  ███████████████ 28
-Array                   ██████████████  27
-Two Pointers            ████████        15
-Hash Table              ██████          13
-Binary Search           █████           11
-Math                    █████           10
-Sorting                 ████            9
+Array                   ███████████████ 30
+String                  ██████████████  29
+Two Pointers            ████████        16
+Hash Table              ███████         14
+Math                    ██████          12
+Binary Search           ██████          12
+Sorting                 █████           11
 Matrix                  ██              5
 Simulation              ██              5
 Stack                   ██              4
@@ -64,13 +64,13 @@ Stack                   ██              4
 
 🟡 Integer to Roman<br>
 🟡 Minimum Time Difference<br>
+🟡 Largest Number<br>
 🟡 Group Anagrams<br>
 🟡 Spiral Matrix<br>
-🟢 Maximum Average Subarray I<br>
 
 ---
 
-_Last Updated: 09 Jul 2026 20:03 UTC_
+_Last Updated: 09 Jul 2026 20:16 UTC_
 
 <!-- LEETCODE_STATS_END -->
 
