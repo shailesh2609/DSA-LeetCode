@@ -23,9 +23,9 @@
 | Difficulty | Solved |
 |------------|-------:|
 | 🟢 Easy | 24 |
-| 🟡 Medium | 33 |
+| 🟡 Medium | 34 |
 | 🔴 Hard | 0 |
-| ⭐ **Total** | **57** |
+| ⭐ **Total** | **58** |
 
 ---
 
@@ -33,7 +33,7 @@
 
 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
-**57 / 500 Problems (11.4%)**
+**58 / 500 Problems (11.6%)**
 
 ---
 
@@ -47,19 +47,19 @@
 
 ```text
 String                  ███████████████ 42
-Array                   █████████████   38
+Array                   █████████████   39
 Hash Table              ██████          19
 Two Pointers            ██████          19
 Binary Search           █████           14
 Math                    █████           14
-Sorting                 ████            13
-Simulation              ██              8
+Sorting                 █████           14
+Simulation              ███             9
+Matrix                  ██              8
 Stack                   ██              8
-Matrix                  ██              7
 Counting                █               5
 Bit Manipulation        █               4
 Greedy                  █               4
-Heap (Priority Queue)   █               3
+Heap (Priority Queue)   █               4
 Prefix Sum              █               3
 Sliding Window          █               3
 Dynamic Programming     █               2
@@ -81,7 +81,7 @@ Trie                    █               1
 
 ---
 
-_Last Updated: 11 Jul 2026 14:20 UTC_
+_Last Updated: 11 Jul 2026 15:09 UTC_
 
 <!-- LEETCODE_STATS_END -->
 

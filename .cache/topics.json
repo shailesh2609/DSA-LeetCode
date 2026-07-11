@@ -658,5 +658,16 @@
             "Array",
             "Matrix"
         ]
+    },
+    "2728": {
+        "title": "Sum in a Matrix",
+        "difficulty": "Medium",
+        "topics": [
+            "Array",
+            "Sorting",
+            "Heap (Priority Queue)",
+            "Matrix",
+            "Simulation"
+        ]
     }
 }
