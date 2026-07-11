@@ -15,12 +15,10 @@ public:
     if(n % 2 == 0){
         ans = (nums[(n/2)-1] + nums[n/2])/2.0;
     }
-    else if(n % 2 != 0) {
+    else {
         ans = nums[n/2];
     }
-    else{
-        ans = nums[0];
-    }
+    
     return ans;
 }
 };
