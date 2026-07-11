@@ -9,6 +9,7 @@ from utils import (
     folder_to_slug,
     get_last_commit_timestamp,
     problem_title,
+    problem_number,
 )
 
 CACHE_DIR = ".cache"
@@ -110,29 +111,35 @@ def fetch_leetcode_stats(username: str):
     return data["data"]["matchedUser"]
 
 def fetch_problem_metadata(slug):
-    """
-    Fetch metadata for a single problem.
-    """
 
-    response = requests.post(
-        GRAPHQL_URL,
-        json={
-            "query": QUESTION_QUERY,
-            "variables": {
-                "titleSlug": slug
-            }
-        },
-        timeout=30,
-    )
+    try:
 
-    response.raise_for_status()
+        response = requests.post(
+            GRAPHQL_URL,
+            json={
+                "query": QUESTION_QUERY,
+                "variables": {
+                    "titleSlug": slug
+                }
+            },
+            timeout=30,
+        )
 
-    data = response.json()
+        response.raise_for_status()
 
-    if "errors" in data:
-        raise Exception(data["errors"])
+        data = response.json()
 
-    return data["data"]["question"]
+        if "errors" in data:
+            print(f"LeetCode returned an error for '{slug}'.")
+            return None
+
+        return data["data"]["question"]
+
+    except requests.RequestException as e:
+
+        print(f"Failed to fetch '{slug}': {e}")
+
+        return None
 
 def update_topic_cache():
 
@@ -142,7 +149,7 @@ def update_topic_cache():
 
     updated = False
 
-    for folder in folders:
+    for folder in sorted(folders, key=problem_number):
 
         print(f"Processing: {folder}")
 
@@ -157,6 +164,10 @@ def update_topic_cache():
         metadata = fetch_problem_metadata(
             folder_to_slug(folder)
         )
+
+        if metadata is None:
+            print(f"Skipping {folder}: metadata not found.")
+            continue 
 
         cache[pid] = {
             "title": metadata["title"],
@@ -305,16 +316,8 @@ def recently_solved(cache, limit=5):
 from collections import Counter
 
 def problem_distribution(cache):
-    """
-    Generates a clean markdown table showing
-    the distribution of solved problems by topic.
-    """
 
-    counter = Counter()
-
-    for problem in cache.values():
-        for topic in problem["topics"]:
-            counter[topic] += 1
+    counter = topic_distribution(cache)
 
     if not counter:
         return "## 📚 Problem Distribution\n\n_No data available._"
@@ -330,7 +333,7 @@ def problem_distribution(cache):
 
     max_topic_length = max(len(topic) for topic in counter.keys())
 
-    for topic, count in counter.most_common(10):
+    for topic, count in sorted(counter.items(), key=lambda x: (-x[1], x[0])):
 
         filled = max(1, int(count / max_count * BAR_LENGTH))
 
