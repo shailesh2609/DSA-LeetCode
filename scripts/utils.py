@@ -119,3 +119,19 @@ def problem_title(folder):
     title = title.replace("-", " ")
 
     return title.title()
+
+def rename_problem_folder(old_folder, new_folder):
+    """
+    Rename a problem folder using git so that
+    Git history is preserved.
+    """
+
+    subprocess.run(
+        [
+            "git",
+            "mv",
+            old_folder,
+            new_folder,
+        ],
+        check=True,
+    )
