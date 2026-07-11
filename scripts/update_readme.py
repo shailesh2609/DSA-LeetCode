@@ -168,7 +168,19 @@ def update_topic_cache():
         official_id = metadata["questionFrontendId"]
 
         print(f"Folder ID   : {folder_id}")
-        print(f"Official ID : {official_id}") 
+        print(f"Official ID : {official_id}")
+
+        if folder_id != official_id:
+
+            print("\n⚠ Incorrect folder detected.")
+
+            print(f"Current Folder : {folder}")
+
+            correct_folder = (
+                f"{official_id}-{folder_to_slug(folder)}"
+            )
+
+            print(f"Correct Folder : {correct_folder}\n")
 
         cache[folder_id] = {
             "title": metadata["title"],
