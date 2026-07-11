@@ -10,6 +10,7 @@ from utils import (
     get_last_commit_timestamp,
     problem_title,
     problem_number,
+    rename_problem_folder,
 )
 
 CACHE_DIR = ".cache"
@@ -172,15 +173,25 @@ def update_topic_cache():
 
         if folder_id != official_id:
 
-            print("\n⚠ Incorrect folder detected.")
-
-            print(f"Current Folder : {folder}")
-
             correct_folder = (
                 f"{official_id}-{folder_to_slug(folder)}"
             )
 
-            print(f"Correct Folder : {correct_folder}\n")
+            print("\n⚠ Incorrect folder detected.")
+
+            print(f"Current Folder : {folder}")
+
+            print(f"Correct Folder : {correct_folder}")
+
+            print("Renaming folder...\n")
+
+            rename_problem_folder(
+                folder,
+                correct_folder,
+            )
+
+            folder = correct_folder
+            folder_id = official_id
 
         cache[folder_id] = {
             "title": metadata["title"],
