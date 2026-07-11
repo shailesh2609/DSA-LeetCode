@@ -12,7 +12,7 @@ public:
     sort(nums.begin(), nums.end());
     double ans;
     int n = nums.size();
-    if(n > 1 && n % 2 == 0){
+    if(n % 2 == 0){
         ans = (nums[(n/2)-1] + nums[n/2])/2.0;
     }
     else if(n > 1 && n % 2 != 0) {
