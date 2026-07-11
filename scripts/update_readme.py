@@ -10,6 +10,7 @@ from utils import (
     get_last_commit_timestamp,
     problem_title,
     problem_number,
+    rename_problem_folder,
 )
 
 CACHE_DIR = ".cache"
@@ -153,12 +154,6 @@ def update_topic_cache():
 
         print(f"Processing: {folder}")
 
-        pid = extract_problem_id(folder)
-
-        if pid in cache:
-            print(f"Already cached: {pid}")
-            continue
-
         print(f"Fetching metadata for {folder}")
 
         metadata = fetch_problem_metadata(
@@ -167,7 +162,14 @@ def update_topic_cache():
 
         if metadata is None:
             print(f"Skipping {folder}: metadata not found.")
-            continue 
+            continue
+
+        folder_id = extract_problem_id(folder)
+
+        official_id = metadata["questionFrontendId"]
+
+        print(f"Folder ID   : {folder_id}")
+        print(f"Official ID : {official_id}") 
 
         cache[pid] = {
             "title": metadata["title"],
