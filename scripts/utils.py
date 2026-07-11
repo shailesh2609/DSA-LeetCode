@@ -1,27 +1,42 @@
 import os
 import re
 import subprocess
-from pathlib import Path
 
+def problem_number(folder):
+    match = re.match(r"(\d+)", folder)
+
+    if match:
+        return int(match.group(1))
+
+    return -1
+    
 def get_problem_folders():
     """
     Returns all LeetCode problem folders.
     """
+    IGNORE = {
+        ".git",
+        ".github",
+        ".cache",
+        "__pycache__",
+        "scripts",
+        "docs",
+        ".vscode",
+    }
 
     folders = []
 
     for item in os.listdir("."):
 
-        if os.path.isdir(item):
+        if not os.path.isdir(item):
+            continue
 
-            if item.startswith("."):
-                continue
+        if item in IGNORE:
+            continue
 
-            if item in ["scripts", "__pycache__"]:
-                continue
-
-            folders.append(item)
-
+        folders.append(item)
+            
+    folders.sort(key=problem_number)
     return folders
 
 def extract_problem_id(folder):
@@ -86,23 +101,6 @@ def get_last_commit_timestamp(folder):
 
     return 0
     
-
-def problem_number(folder):
-    """
-    Extract problem number.
-
-    Example:
-    704-binary-search -> 704
-    """
-
-    match = re.match(r"(\d+)", folder)
-
-    if match:
-        return int(match.group(1))
-
-    return -1
-
-
 def problem_title(folder):
     """
     Convert folder name to readable title.
