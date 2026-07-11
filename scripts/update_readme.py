@@ -10,7 +10,6 @@ from utils import (
     get_last_commit_timestamp,
     problem_title,
     problem_number,
-    rename_problem_folder,
 )
 
 CACHE_DIR = ".cache"
