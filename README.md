@@ -47,19 +47,19 @@
 
 ```text
 String                  ███████████████ 42
-Array                   █████████████   39
+Array                   ██████████████  40
 Hash Table              ██████          19
 Two Pointers            ██████          19
+Sorting                 █████           15
 Binary Search           █████           14
 Math                    █████           14
-Sorting                 █████           14
-Simulation              ███             9
-Matrix                  ██              8
+Simulation              ███             10
+Matrix                  ███             9
 Stack                   ██              8
 Counting                █               5
+Heap (Priority Queue)   █               5
 Bit Manipulation        █               4
 Greedy                  █               4
-Heap (Priority Queue)   █               4
 Prefix Sum              █               3
 Sliding Window          █               3
 Dynamic Programming     █               2
@@ -81,7 +81,7 @@ Trie                    █               1
 
 ---
 
-_Last Updated: 11 Jul 2026 15:14 UTC_
+_Last Updated: 11 Jul 2026 15:20 UTC_
 
 <!-- LEETCODE_STATS_END -->
 
