@@ -170,7 +170,7 @@ def update_topic_cache():
         print(f"Folder ID   : {folder_id}")
         print(f"Official ID : {official_id}") 
 
-        cache[pid] = {
+        cache[folder_id] = {
             "title": metadata["title"],
             "difficulty": metadata["difficulty"],
             "topics": [
