@@ -168,9 +168,6 @@ def update_topic_cache():
 
         official_id = metadata["questionFrontendId"]
 
-        print(f"Folder ID   : {folder_id}")
-        print(f"Official ID : {official_id}")
-
         if folder_id != official_id:
 
             correct_folder = (
@@ -191,9 +188,9 @@ def update_topic_cache():
             )
 
             folder = correct_folder
-            folder_id = official_id
 
-        cache[folder_id] = {
+        # Always use the official LeetCode ID as the cache key
+        cache[official_id] = {
             "title": metadata["title"],
             "difficulty": metadata["difficulty"],
             "topics": [
