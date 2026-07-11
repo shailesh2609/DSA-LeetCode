@@ -39,7 +39,7 @@
 
 ## 🌍 Global Ranking
 
-**2,366,467**
+**2,368,233**
 
 ---
 
@@ -70,7 +70,7 @@ Stack                   ██              4
 
 ---
 
-_Last Updated: 10 Jul 2026 01:54 UTC_
+_Last Updated: 11 Jul 2026 01:43 UTC_
 
 <!-- LEETCODE_STATS_END -->
 
