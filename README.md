@@ -39,38 +39,49 @@
 
 ## 🌍 Global Ranking
 
-**2,368,233**
+**2,369,765**
 
 ---
 
 ## 📚 Problem Distribution
 
 ```text
-Array                   ███████████████ 30
-String                  ██████████████  29
-Two Pointers            ████████        16
-Hash Table              ███████         14
-Math                    ██████          12
-Binary Search           ██████          12
-Sorting                 █████           11
-Matrix                  ██              5
-Simulation              ██              5
-Stack                   ██              4
+String                  ███████████████ 42
+Array                   █████████████   38
+Hash Table              ██████          19
+Two Pointers            ██████          19
+Binary Search           █████           14
+Math                    █████           14
+Sorting                 ████            13
+Simulation              ██              8
+Stack                   ██              8
+Matrix                  ██              7
+Counting                █               5
+Bit Manipulation        █               4
+Greedy                  █               4
+Heap (Priority Queue)   █               3
+Prefix Sum              █               3
+Sliding Window          █               3
+Dynamic Programming     █               2
+Divide and Conquer      █               1
+Number Theory           █               1
+String Matching         █               1
+Trie                    █               1
 ```
 
 ---
 
 ## 🔥 Recently Solved
 
-🟡 Integer to Roman<br>
-🟡 Minimum Time Difference<br>
-🟡 Largest Number<br>
-🟡 Group Anagrams<br>
-🟡 Spiral Matrix<br>
+🟢 Two Sum<br>
+🟡 Longest Substring Without Repeating Characters<br>
+🟡 Longest Palindromic Substring<br>
+🟡 Zigzag Conversion<br>
+🟡 Reverse Integer<br>
 
 ---
 
-_Last Updated: 11 Jul 2026 08:54 UTC_
+_Last Updated: 11 Jul 2026 14:20 UTC_
 
 <!-- LEETCODE_STATS_END -->
 
