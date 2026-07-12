@@ -24,8 +24,8 @@
 |------------|-------:|
 | 🟢 Easy | 24 |
 | 🟡 Medium | 34 |
-| 🔴 Hard | 0 |
-| ⭐ **Total** | **58** |
+| 🔴 Hard | 1 |
+| ⭐ **Total** | **59** |
 
 ---
 
@@ -33,7 +33,7 @@
 
 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
-**58 / 500 Problems (11.6%)**
+**59 / 500 Problems (11.8%)**
 
 ---
 
@@ -47,11 +47,11 @@
 
 ```text
 String                  ███████████████ 42
-Array                   ██████████████  40
+Array                   ██████████████  41
 Hash Table              ██████          19
 Two Pointers            ██████          19
+Binary Search           █████           15
 Sorting                 █████           15
-Binary Search           █████           14
 Math                    █████           14
 Simulation              ███             10
 Matrix                  ███             9
@@ -62,8 +62,8 @@ Bit Manipulation        █               4
 Greedy                  █               4
 Prefix Sum              █               3
 Sliding Window          █               3
+Divide and Conquer      █               2
 Dynamic Programming     █               2
-Divide and Conquer      █               1
 Number Theory           █               1
 String Matching         █               1
 Trie                    █               1
@@ -75,13 +75,13 @@ Trie                    █               1
 
 🟢 Two Sum<br>
 🟡 Longest Substring Without Repeating Characters<br>
+🔴 Median of Two Sorted Arrays<br>
 🟡 Longest Palindromic Substring<br>
 🟡 Zigzag Conversion<br>
-🟡 Reverse Integer<br>
 
 ---
 
-_Last Updated: 11 Jul 2026 15:28 UTC_
+_Last Updated: 12 Jul 2026 01:46 UTC_
 
 <!-- LEETCODE_STATS_END -->
 

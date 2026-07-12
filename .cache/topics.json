@@ -680,5 +680,14 @@
             "Matrix",
             "Simulation"
         ]
+    },
+    "4": {
+        "title": "Median of Two Sorted Arrays",
+        "difficulty": "Hard",
+        "topics": [
+            "Array",
+            "Binary Search",
+            "Divide and Conquer"
+        ]
     }
 }
