@@ -689,5 +689,12 @@
             "Binary Search",
             "Divide and Conquer"
         ]
+    },
+    "9": {
+        "title": "Palindrome Number",
+        "difficulty": "Easy",
+        "topics": [
+            "Math"
+        ]
     }
 }
