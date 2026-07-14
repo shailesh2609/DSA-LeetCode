@@ -39,7 +39,7 @@
 
 ## 🌍 Global Ranking
 
-**2,318,531**
+**2,294,301**
 
 ---
 
@@ -81,7 +81,7 @@ Trie                    █               1
 
 ---
 
-_Last Updated: 13 Jul 2026 01:48 UTC_
+_Last Updated: 14 Jul 2026 01:25 UTC_
 
 <!-- LEETCODE_STATS_END -->
 
