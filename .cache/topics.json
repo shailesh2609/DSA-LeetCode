@@ -696,5 +696,23 @@
         "topics": [
             "Math"
         ]
+    },
+    "13": {
+        "title": "Roman to Integer",
+        "difficulty": "Easy",
+        "topics": [
+            "Hash Table",
+            "Math",
+            "String"
+        ]
+    },
+    "15": {
+        "title": "3Sum",
+        "difficulty": "Medium",
+        "topics": [
+            "Array",
+            "Two Pointers",
+            "Sorting"
+        ]
     }
 }

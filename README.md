@@ -22,10 +22,10 @@
 
 | Difficulty | Solved |
 |------------|-------:|
-| 🟢 Easy | 25 |
-| 🟡 Medium | 34 |
+| 🟢 Easy | 26 |
+| 🟡 Medium | 35 |
 | 🔴 Hard | 1 |
-| ⭐ **Total** | **60** |
+| ⭐ **Total** | **62** |
 
 ---
 
@@ -33,26 +33,26 @@
 
 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
-**60 / 500 Problems (12.0%)**
+**62 / 500 Problems (12.4%)**
 
 ---
 
 ## 🌍 Global Ranking
 
-**2,294,301**
+**2,270,610**
 
 ---
 
 ## 📚 Problem Distribution
 
 ```text
-String                  ███████████████ 42
-Array                   ██████████████  41
-Hash Table              ██████          19
-Two Pointers            ██████          19
+String                  ███████████████ 43
+Array                   ██████████████  42
+Hash Table              ██████          20
+Two Pointers            ██████          20
+Math                    █████           16
+Sorting                 █████           16
 Binary Search           █████           15
-Math                    █████           15
-Sorting                 █████           15
 Simulation              ███             10
 Matrix                  ███             9
 Stack                   ██              8
@@ -81,7 +81,7 @@ Trie                    █               1
 
 ---
 
-_Last Updated: 14 Jul 2026 01:25 UTC_
+_Last Updated: 14 Jul 2026 18:24 UTC_
 
 <!-- LEETCODE_STATS_END -->
 
