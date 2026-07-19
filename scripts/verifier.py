@@ -1,5 +1,5 @@
 from graphql import fetch_problem_metadata
-
+from models import Problem
 from utils import (
     get_problem_folders,
     extract_problem_id,
@@ -47,10 +47,17 @@ def verify_problem_folders():
             folder = correct_folder
 
         verified_problems.append(
-            {
-                "folder": folder,
-                "metadata": metadata,
-            }
+            Problem(
+                frontend_id=official_id,
+                title=metadata["title"],
+                difficulty=metadata["difficulty"],
+                topics=[
+                    tag["name"]
+                    for tag in metadata["topicTags"]
+                ],
+                folder=folder,
+                slug=slug,
+            )
         )
 
     print("Folder verification complete.\n")
