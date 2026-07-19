@@ -58,8 +58,6 @@ def update_topic_cache():
 
         official_id = metadata["questionFrontendId"]
 
-            folder = correct_folder
-
         # Always use the official LeetCode ID as the cache key
         cache[official_id] = {
             "title": metadata["title"],
