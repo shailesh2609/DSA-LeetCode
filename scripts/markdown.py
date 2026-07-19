@@ -99,16 +99,52 @@ def build_leetcode_badge(stats):
 # ==========================================================
 
 def build_difficulty(stats):
+    """
+    Generate the difficulty breakdown section.
+    """
 
-    return f"""
-## 📈 Difficulty Breakdown
+    values = {
+        "Easy": stats["easy"],
+        "Medium": stats["medium"],
+        "Hard": stats["hard"],
+    }
 
-🟢 Easy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{stats["easy"]}
+    max_value = max(values.values()) if values else 1
 
-🟡 Medium&nbsp;&nbsp;{stats["medium"]}
+    icons = {
+        "Easy": "🟢",
+        "Medium": "🟡",
+        "Hard": "🔴",
+    }
 
-🔴 Hard&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{stats["hard"]}
-"""
+    lines = [
+        "## 📈 Difficulty Breakdown",
+        "",
+        "```text",
+    ]
+
+    for difficulty in ("Easy", "Medium", "Hard"):
+
+        solved = values[difficulty]
+
+        filled = (
+            max(1, int(solved / max_value * TOPIC_BAR_LENGTH))
+            if solved > 0
+            else 0
+        )
+
+        bar = "█" * filled
+
+        lines.append(
+            f"{icons[difficulty]} "
+            f"{difficulty:<7} "
+            f"{bar:<{TOPIC_BAR_LENGTH}} "
+            f"{solved}"
+        )
+
+    lines.append("```")
+
+    return "\n".join(lines)
 
 
 def build_progress(stats):
@@ -146,7 +182,7 @@ def build_ranking(stats):
 
 def recently_solved(problems, limit=5):
     """
-    Generate the 'Recently Solved' section.
+    Generate the Recently Solved section.
     """
 
     problems = sorted(
@@ -155,16 +191,16 @@ def recently_solved(problems, limit=5):
         reverse=True,
     )
 
-    lines = [
-        "## 🔥 Recently Solved",
-        "",
-    ]
-
     icons = {
         "Easy": "🟢",
         "Medium": "🟡",
         "Hard": "🔴",
     }
+
+    lines = [
+        "## 🔥 Recently Solved",
+        "",
+    ]
 
     for problem in problems[:limit]:
 
@@ -173,14 +209,19 @@ def recently_solved(problems, limit=5):
             "⚪",
         )
 
+        url = (
+            f"https://leetcode.com/problems/"
+            f"{problem.slug}/"
+        )
+
         lines.append(
-            f"{icon} {problem.frontend_id}. {problem.title}"
+            f"{icon} "
+            f"[{problem.frontend_id}. {problem.title}]({url})"
         )
 
         lines.append("")
 
     return "\n".join(lines)
-
 
 # ==========================================================
 # Topic Distribution
@@ -209,54 +250,77 @@ def topic_distribution(problems):
 def problem_distribution(problems):
     """
     Generate the topic distribution section.
+    Shows Top 10 topics and keeps the complete list
+    inside a collapsible details block.
     """
 
     counter = topic_distribution(problems)
 
     if not counter:
-        return "## 📚 Topic Distribution\n\n_No data available._"
+        return "## 📚 Top Topics\n\n_No data available._"
 
     total = len(problems)
-
     max_count = max(counter.values())
 
-    max_topic = max(
-        len(topic)
-        for topic in counter
-    )
-
-    lines = [
-        "## 📚 Top Topics",
-        "",
-        "```text",
-    ]
-
-    for topic, count in sorted(
+    sorted_topics = sorted(
         counter.items(),
         key=lambda item: (-item[1], item[0]),
-    ):
+    )
 
-        percentage = count / total * 100
+    max_topic_length = max(
+        len(topic)
+        for topic, _ in sorted_topics
+    )
 
-        filled = max(
-            1,
-            int(
-                count / max_count * TOPIC_BAR_LENGTH
-            ),
-        )
+    def build_table(topics):
 
-        bar = "█" * filled
+        lines = ["```text"]
 
-        lines.append(
-            f"{topic:<{max_topic}} "
-            f"{bar:<{TOPIC_BAR_LENGTH}} "
-            f"{count:>3} "
-            f"({percentage:4.1f}%)"
-        )
+        for topic, count in topics:
 
-    lines.append("```")
+            percentage = count / total * 100
 
-    return "\n".join(lines)
+            filled = max(
+                1,
+                int(count / max_count * TOPIC_BAR_LENGTH),
+            )
+
+            bar = "█" * filled
+
+            lines.append(
+                f"{topic:<{max_topic_length}} "
+                f"{bar:<{TOPIC_BAR_LENGTH}} "
+                f"{count:>3} "
+                f"({percentage:4.1f}%)"
+            )
+
+        lines.append("```")
+
+        return "\n".join(lines)
+
+    top_topics = sorted_topics[:10]
+
+    remaining_topics = sorted_topics[10:]
+
+    markdown = [
+        "## 📚 Top Topics",
+        "",
+        build_table(top_topics),
+    ]
+
+    if remaining_topics:
+
+        markdown.extend([
+            "",
+            "<details>",
+            "<summary><b>Show Complete Topic Distribution</b></summary>",
+            "",
+            build_table(remaining_topics),
+            "",
+            "</details>",
+        ])
+
+    return "\n".join(markdown)
 
 
 # ==========================================================
