@@ -10,14 +10,12 @@ from utils import (
 
 def verify_problem_folders():
     """
-    Verify every problem folder against the official
-    LeetCode frontend ID.
-
-    If LeetSync created an incorrect folder name,
-    rename it using git mv.
+    Verify every problem folder and return the verified metadata.
     """
 
     print("\nVerifying problem folders...\n")
+
+    verified_problems = []
 
     for folder in get_problem_folders():
 
@@ -29,24 +27,32 @@ def verify_problem_folders():
             print(f"Skipping {folder}")
             continue
 
-        folder_id = extract_problem_id(folder)
-
         official_id = metadata["questionFrontendId"]
 
-        if folder_id == official_id:
-            continue
+        if extract_problem_id(folder) != official_id:
 
-        correct_folder = (
-            f"{official_id}-{slug}"
-        )
+            correct_folder = (
+                f"{official_id}-{slug}"
+            )
 
-        print(f"Renaming:")
-        print(f"  {folder}")
-        print(f"  → {correct_folder}\n")
+            print(f"Renaming:")
+            print(f"  {folder}")
+            print(f"  → {correct_folder}\n")
 
-        rename_problem_folder(
-            folder,
-            correct_folder,
+            rename_problem_folder(
+                folder,
+                correct_folder,
+            )
+
+            folder = correct_folder
+
+        verified_problems.append(
+            {
+                "folder": folder,
+                "metadata": metadata,
+            }
         )
 
     print("Folder verification complete.\n")
+
+    return verified_problems
