@@ -137,12 +137,12 @@ def build_difficulty(stats):
 
         lines.append(
             f"{icons[difficulty]} "
-            f"{difficulty:<7} "
-            f"{bar:<{TOPIC_BAR_LENGTH}} "
-            f"{solved}"
+            f"{difficulty:<10}"
+            f"{bar:<20}"
+            f"{solved:>4}"
         )
 
-    lines.append("```")
+        lines.append("")
 
     return "\n".join(lines)
 
@@ -215,8 +215,8 @@ def recently_solved(problems, limit=5):
         )
 
         lines.append(
-            f"{icon} "
-            f"[{problem.frontend_id}. {problem.title}]({url})"
+            f"{icon} {problem.frontend_id}. "
+            f"[{problem.title}]({url})"
         )
 
         lines.append("")
