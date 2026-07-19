@@ -7,6 +7,8 @@ from repository import get_last_commit_timestamp
 # Parse Response
 # -----------------------------
 
+GOAL = 500
+
 def parse_stats(user_data):
     """
     Convert GraphQL response into
