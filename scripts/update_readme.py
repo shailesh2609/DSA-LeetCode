@@ -7,6 +7,7 @@ from graphql import (
     fetch_leetcode_stats,
     fetch_problem_metadata,
 )
+from verifier import verify_problem_folders
 from datetime import datetime, UTC
 
 from utils import (
@@ -55,28 +56,7 @@ def update_topic_cache():
             print(f"Skipping {folder}: metadata not found.")
             continue
 
-        folder_id = extract_problem_id(folder)
-
         official_id = metadata["questionFrontendId"]
-
-        if folder_id != official_id:
-
-            correct_folder = (
-                f"{official_id}-{folder_to_slug(folder)}"
-            )
-
-            print("\n⚠ Incorrect folder detected.")
-
-            print(f"Current Folder : {folder}")
-
-            print(f"Correct Folder : {correct_folder}")
-
-            print("Renaming folder...\n")
-
-            rename_problem_folder(
-                folder,
-                correct_folder,
-            )
 
             folder = correct_folder
 
@@ -337,7 +317,9 @@ def main():
     user = fetch_leetcode_stats(USERNAME)
 
     stats = parse_stats(user)
-    
+
+    verify_problem_folders()
+
     cache = update_topic_cache()
 
     markdown = generate_markdown(stats, cache)
