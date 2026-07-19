@@ -11,7 +11,6 @@ from datetime import datetime, UTC
 
 from utils import (
     get_problem_folders,
-    extract_problem_id,
     get_last_commit_timestamp,
     problem_title,
 )
@@ -38,20 +37,10 @@ def update_topic_cache(verified_problems):
 
     for problem in verified_problems:
 
-        folder = problem["folder"]
-
-        metadata = problem["metadata"]
-
-        official_id = metadata["questionFrontendId"]
-
-        # Always use the official LeetCode ID as the cache key
-        cache[official_id] = {
-            "title": metadata["title"],
-            "difficulty": metadata["difficulty"],
-            "topics": [
-                tag["name"]
-                for tag in metadata["topicTags"]
-            ]
+        cache[problem.frontend_id] = {
+            "title": problem.title,
+            "difficulty": problem.difficulty,
+            "topics": problem.topics,
         }
 
         updated = True
