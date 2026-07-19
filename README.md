@@ -34,15 +34,13 @@
 
 ---
 
-
 ## 📈 Difficulty Breakdown
 
-🟢 Easy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;26
-
-🟡 Medium&nbsp;&nbsp;38
-
-🔴 Hard&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1
-
+```text
+🟢 Easy    ██████████      26
+🟡 Medium  ███████████████ 38
+🔴 Hard    █               1
+```
 
 ---
 
@@ -79,6 +77,12 @@ Binary Search         █████            13 (20.0%)
 Simulation            ███               7 (10.8%)
 Matrix                ██                6 ( 9.2%)
 Stack                 █                 4 ( 6.2%)
+```
+
+<details>
+<summary><b>Show Complete Topic Distribution</b></summary>
+
+```text
 Bit Manipulation      █                 3 ( 4.6%)
 Counting              █                 3 ( 4.6%)
 Greedy                █                 3 ( 4.6%)
@@ -93,26 +97,28 @@ Trie                  █                 1 ( 1.5%)
 Union-Find            █                 1 ( 1.5%)
 ```
 
+</details>
+
 ---
 
 ## 🔥 Recently Solved
 
-🟡 2177. Find Three Consecutive Integers That Sum to a Given Number
+🟡 [2177. Find Three Consecutive Integers That Sum to a Given Number](https://leetcode.com/problems/find-three-consecutive-integers-that-sum-to-a-given-number/)
 
-🟡 128. Longest Consecutive Sequence
+🟡 [128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
 
-🟡 16. 3Sum Closest
+🟡 [16. 3Sum Closest](https://leetcode.com/problems/3sum-closest/)
 
-🟡 15. 3Sum
+🟡 [15. 3Sum](https://leetcode.com/problems/3sum/)
 
-🟢 13. Roman to Integer
+🟢 [13. Roman to Integer](https://leetcode.com/problems/roman-to-integer/)
 
 
 ---
 
 🕒 **Last Updated**
 
-19 Jul 2026 • 23:25 UTC
+19 Jul 2026 • 23:36 UTC
 
 <!-- LEETCODE_STATS_END -->
 
