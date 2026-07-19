@@ -1,7 +1,7 @@
 from graphql import fetch_problem_metadata
 from models import Problem
-from repository import (
-    get_problem_folders,
+from repository import get_problem_folders
+from utils import (
     extract_problem_id,
     folder_to_slug,
     rename_problem_folder,
