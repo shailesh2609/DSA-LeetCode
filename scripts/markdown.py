@@ -148,7 +148,7 @@ def recently_solved(problems, limit=5):
         }.get(difficulty, "⚪")
 
         lines.append(
-            f"{icon} #{problem.frontend_id} {problem.title}<br>"
+            f"{icon} {problem.frontend_id}. {problem.title}<br>"
         )
 
     return "\n".join(lines)
