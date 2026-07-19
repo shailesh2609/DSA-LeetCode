@@ -1,13 +1,8 @@
-from datetime import datetime, UTC
 from collections import Counter
-
-from repository import get_last_commit_timestamp
-
-# -----------------------------
-# Parse Response
-# -----------------------------
+from datetime import datetime, UTC
 
 from config import GOAL
+from repository import get_last_commit_timestamp
 
 def parse_stats(user_data):
     """
@@ -46,7 +41,10 @@ def parse_stats(user_data):
 # -----------------------------
 
 def progress_bar(current, goal, width=20):
-    filled = int((current / goal) * width)
+    filled = min(
+        width,
+        int(current / goal * width),
+    )
     return "🟩" * filled + "⬜" * (width - filled)
     
 
@@ -149,11 +147,12 @@ def recently_solved(problems, limit=5):
             "Hard": "🔴"
         }.get(difficulty, "⚪")
 
-        lines.append(f"{icon} {problem.title}<br>")
+        lines.append(
+            f"{icon} #{problem.frontend_id} {problem.title}<br>"
+        )
 
     return "\n".join(lines)
     
-from collections import Counter
 
 def problem_distribution(problems):
 
@@ -173,14 +172,27 @@ def problem_distribution(problems):
 
     max_topic_length = max(len(topic) for topic in counter.keys())
 
-    for topic, count in sorted(counter.items(), key=lambda x: (-x[1], x[0])):
+    total = len(problems)
 
-        filled = max(1, int(count / max_count * BAR_LENGTH))
+    for topic, count in sorted(
+        counter.items(),
+        key=lambda x: (-x[1], x[0]),
+    ):
+
+        percentage = count / total * 100
+
+        filled = max(
+            1,
+            int(count / max_count * BAR_LENGTH),
+        )
 
         bar = "█" * filled
 
         lines.append(
-            f"{topic:<{max_topic_length}}   {bar:<15} {count}"
+            f"{topic:<{max_topic_length}}   "
+            f"{bar:<15} "
+            f"{count:>3} "
+            f"({percentage:4.1f}%)"
         )
 
     # Close the code block
