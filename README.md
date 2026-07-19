@@ -1,17 +1,26 @@
 <h1 align="center">
 🚀 DSA-LeetCode
 </h1>
+
+<p align="center">
+<i>Automatically synced LeetCode solutions with GitHub Actions • Built using Python</i>
+</p>
+
 <p align="center">
 
-<img src="https://img.shields.io/badge/C%2B%2B-blue?style=for-the-badge&logo=c%2B%2B" />
+<img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=cplusplus&logoColor=white"/>
 
-<img src="https://img.shields.io/badge/LeetCode-57%20Solved-orange?style=for-the-badge&logo=leetcode" />
+<!-- LEETCODE_BADGE -->
 
-<img src="https://img.shields.io/badge/GitHub-Actions-success?style=for-the-badge&logo=githubactions" />
+<img src="https://img.shields.io/badge/GitHub_Actions-Automated-2088FF?style=for-the-badge&logo=githubactions&logoColor=white"/>
 
-<img src="https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge" />
+<img src="https://img.shields.io/badge/Status-Active-2EA44F?style=for-the-badge"/>
 
 </p>
+
+---
+
+> 🚀 **This repository automatically syncs every accepted LeetCode solution, verifies folder names, updates problem statistics, tracks recently solved problems, and regenerates this README using GitHub Actions.**
 
 ---
 
@@ -32,19 +41,21 @@
 ---
 
 
-### 🎯 Progress
+## 🎯 Progress Towards Goal
 
 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
-**65 / 500 Problems (13.0%)**
+🎯 **65 / 500 Problems**
+
+📈 **Completion:** 13.0%
 
 
 ---
 
 
-## 🌍 Global Ranking
+## 🌍 Global Rank
 
-**2,208,062**
+🏅 **2,208,062**
 
 
 ---
@@ -78,7 +89,7 @@ Union-Find              █                 1 ( 1.5%)
 
 ---
 
-## 🔥 Recently Solved
+## 🔥 Recently Solved Problems
 
 🟡 2177. Find Three Consecutive Integers That Sum to a Given Number<br>
 🟡 128. Longest Consecutive Sequence<br>
@@ -88,22 +99,26 @@ Union-Find              █                 1 ( 1.5%)
 
 ---
 
-_Last Updated: 19 Jul 2026 22:57 UTC_
+🕒 Last Updated
+
+19 Jul 2026 • 22:57 UTC
 
 <!-- LEETCODE_STATS_END -->
 
 ---
 
 
-# 💻 Language
+## 👨‍💻 LeetCode Profile
 
- C++
+<p align="center">
 
----
+<a href="https://leetcode.com/u/Shailesh_26/">
 
-# 👨‍💻 LeetCode Profile
+<img src="https://img.shields.io/badge/View%20My%20LeetCode%20Profile-FFA116?style=for-the-badge&logo=leetcode&logoColor=white"/>
 
-https://leetcode.com/u/Shailesh_26/
+</a>
+
+</p>
 
 ---
 
