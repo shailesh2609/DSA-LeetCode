@@ -5,7 +5,6 @@ from cache import (
 )
 from graphql import (
     fetch_leetcode_stats,
-    fetch_problem_metadata,
 )
 from verifier import verify_problem_folders
 from datetime import datetime, UTC
@@ -13,11 +12,8 @@ from datetime import datetime, UTC
 from utils import (
     get_problem_folders,
     extract_problem_id,
-    folder_to_slug,
     get_last_commit_timestamp,
     problem_title,
-    problem_number,
-    rename_problem_folder,
 )
 
 
