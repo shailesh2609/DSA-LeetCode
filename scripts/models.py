@@ -3,11 +3,7 @@ from dataclasses import dataclass
 
 @dataclass(slots=True)
 class Problem:
-    """
-    Represents a single solved LeetCode problem.
-    """
-
-    id: str
+    frontend_id: str
     title: str
     difficulty: str
     topics: list[str]
