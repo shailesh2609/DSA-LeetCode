@@ -2,10 +2,9 @@ import requests
 
 GRAPHQL_URL = "https://leetcode.com/graphql"
 
-QUERY = """
+USER_QUERY = """
 query getUserProfile($username: String!) {
   matchedUser(username: $username) {
-
     profile {
       ranking
     }
@@ -20,7 +19,7 @@ query getUserProfile($username: String!) {
 }
 """
 
-QUESTION_QUERY = """
+PROBLEM_QUERY = """
 query questionData($titleSlug: String!) {
   question(titleSlug: $titleSlug) {
     questionFrontendId
@@ -35,18 +34,16 @@ query questionData($titleSlug: String!) {
 """
 
 
-def fetch_leetcode_stats(username: str):
+def graphql_request(query: str, variables: dict):
     """
-    Fetch user statistics from LeetCode GraphQL API.
+    Execute a GraphQL request and return the JSON response.
     """
 
     response = requests.post(
         GRAPHQL_URL,
         json={
-            "query": QUERY,
-            "variables": {
-                "username": username
-            }
+            "query": query,
+            "variables": variables,
         },
         timeout=30,
     )
@@ -56,40 +53,43 @@ def fetch_leetcode_stats(username: str):
     data = response.json()
 
     if "errors" in data:
-        raise Exception(data["errors"])
+        raise RuntimeError(data["errors"])
 
-    return data["data"]["matchedUser"]
+    return data["data"]
+
+
+def fetch_leetcode_stats(username: str):
+    """
+    Fetch user statistics.
+    """
+
+    data = graphql_request(
+        USER_QUERY,
+        {
+            "username": username,
+        },
+    )
+
+    return data["matchedUser"]
 
 
 def fetch_problem_metadata(slug: str):
     """
-    Fetch metadata for a single LeetCode problem.
+    Fetch metadata for a single problem.
     """
 
     try:
 
-        response = requests.post(
-            GRAPHQL_URL,
-            json={
-                "query": QUESTION_QUERY,
-                "variables": {
-                    "titleSlug": slug
-                }
+        data = graphql_request(
+            PROBLEM_QUERY,
+            {
+                "titleSlug": slug,
             },
-            timeout=30,
         )
 
-        response.raise_for_status()
+        return data["question"]
 
-        data = response.json()
-
-        if "errors" in data:
-            print(f"LeetCode returned an error for '{slug}'.")
-            return None
-
-        return data["data"]["question"]
-
-    except requests.RequestException as e:
+    except Exception as e:
 
         print(f"Failed to fetch '{slug}': {e}")
 
