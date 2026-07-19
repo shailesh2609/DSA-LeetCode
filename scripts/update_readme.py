@@ -14,7 +14,7 @@ from markdown import (
 # Configuration
 # -----------------------------
 
-USERNAME = os.getenv("LEETCODE_USERNAME")
+from config import USERNAME
 GOAL = 500
 
 
