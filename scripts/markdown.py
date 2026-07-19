@@ -35,6 +35,16 @@ def parse_stats(user_data):
         "ranking": ranking,
     }
 
+def build_leetcode_badge(stats):
+
+    solved = stats["total"]
+
+    return (
+        f'<img src="https://img.shields.io/badge/'
+        f'LeetCode-{solved}%20Solved-FFA116'
+        f'?style=for-the-badge&logo=leetcode'
+        f'&logoColor=white"/>'
+    )
 
 # -----------------------------
 # Progress Bar
