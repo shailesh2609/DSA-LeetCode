@@ -144,6 +144,8 @@ def build_difficulty(stats):
 
         lines.append("")
 
+    lines.append("```")
+
     return "\n".join(lines)
 
 
