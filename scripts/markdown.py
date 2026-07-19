@@ -4,70 +4,112 @@ from datetime import datetime, UTC
 from config import GOAL
 from repository import get_last_commit_timestamp
 
+
+# ==========================================================
+# Constants
+# ==========================================================
+
+START_MARKER = "<!-- LEETCODE_STATS_START -->"
+END_MARKER = "<!-- LEETCODE_STATS_END -->"
+
+BAR_LENGTH = 20
+TOPIC_BAR_LENGTH = 15
+
+
+# ==========================================================
+# Statistics
+# ==========================================================
+
 def parse_stats(user_data):
     """
-    Convert GraphQL response into
-    an easy-to-use dictionary.
+    Parse LeetCode GraphQL response.
     """
 
     stats = {
-        "Easy": 0,
-        "Medium": 0,
-        "Hard": 0,
-        "All": 0
+        "easy": 0,
+        "medium": 0,
+        "hard": 0,
+        "total": 0,
+        "ranking": 0,
     }
 
-    submissions = user_data["submitStats"]["acSubmissionNum"]
+    for item in user_data["submitStats"]["acSubmissionNum"]:
 
-    for item in submissions:
         difficulty = item["difficulty"]
+
         count = item["count"]
 
-        stats[difficulty] = count
+        if difficulty == "Easy":
+            stats["easy"] = count
 
-    ranking = user_data["profile"]["ranking"]
+        elif difficulty == "Medium":
+            stats["medium"] = count
 
-    return {
-        "easy": stats["Easy"],
-        "medium": stats["Medium"],
-        "hard": stats["Hard"],
-        "total": stats["All"],
-        "ranking": ranking,
-    }
+        elif difficulty == "Hard":
+            stats["hard"] = count
+
+        elif difficulty == "All":
+            stats["total"] = count
+
+    stats["ranking"] = user_data["profile"]["ranking"]
+
+    return stats
+
+
+# ==========================================================
+# Progress Bar
+# ==========================================================
+
+def progress_bar(current, goal, width=BAR_LENGTH):
+    """
+    Generate a unicode progress bar.
+    """
+
+    filled = min(
+        width,
+        int(current / goal * width),
+    )
+
+    empty = width - filled
+
+    return "█" * filled + "░" * empty
+
+
+# ==========================================================
+# Badge
+# ==========================================================
 
 def build_leetcode_badge(stats):
 
     solved = stats["total"]
 
     return (
+        '<p align="center">\n'
         f'<img src="https://img.shields.io/badge/'
         f'LeetCode-{solved}%20Solved-FFA116'
-        f'?style=for-the-badge&logo=leetcode'
-        f'&logoColor=white"/>'
+        f'?style=for-the-badge'
+        f'&logo=leetcode'
+        f'&logoColor=white"/>\n'
+        '</p>'
     )
 
-# -----------------------------
-# Progress Bar
-# -----------------------------
 
-def progress_bar(current, goal, width=20):
-    filled = min(
-        width,
-        int(current / goal * width),
-    )
-    return "🟩" * filled + "⬜" * (width - filled)
-    
+# ==========================================================
+# Sections
+# ==========================================================
 
-def build_stats_table(stats):
+def build_difficulty(stats):
 
     return f"""
-| Difficulty | Solved |
-|------------|-------:|
-| 🟢 Easy | {stats['easy']} |
-| 🟡 Medium | {stats['medium']} |
-| 🔴 Hard | {stats['hard']} |
-| ⭐ **Total** | **{stats['total']}** |
+## 📈 Difficulty Breakdown
+
+🟢 Easy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{stats["easy"]}
+
+🟡 Medium&nbsp;&nbsp;{stats["medium"]}
+
+🔴 Hard&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{stats["hard"]}
 """
+
 
 def build_progress(stats):
 
@@ -79,62 +121,33 @@ def build_progress(stats):
     )
 
     return f"""
-### 🎯 Progress
+## 🎯 Progress
 
 {bar}
 
-**{stats['total']} / {GOAL} Problems ({percentage:.1f}%)**
+**{stats["total"]} / {GOAL} Problems**
+
+📈 **Completion:** {percentage:.1f}%
 """
+
 
 def build_ranking(stats):
 
     return f"""
-## 🌍 Global Ranking
+## 🌍 Global Rank
 
-**{stats['ranking']:,}**
+🏅 **{stats["ranking"]:,}**
 """
 
-def build_footer():
 
-    return (
-        "_Last Updated: "
-        + datetime.now(UTC).strftime("%d %b %Y %H:%M UTC")
-        + "_"
-    )
-    
-    
-# -----------------------------
-# Markdown Generator
-# -----------------------------
-
-def generate_markdown(stats, problems):
-
-    return f"""
-{build_stats_table(stats)}
-
----
-
-{build_progress(stats)}
-
----
-
-{build_ranking(stats)}
-
----
-
-{problem_distribution(problems)}
-
----
-
-{recently_solved(problems)}
-
----
-
-{build_footer()}
-"""
-
+# ==========================================================
+# Recently Solved
+# ==========================================================
 
 def recently_solved(problems, limit=5):
+    """
+    Generate the 'Recently Solved' section.
+    """
 
     problems = sorted(
         problems,
@@ -144,76 +157,38 @@ def recently_solved(problems, limit=5):
 
     lines = [
         "## 🔥 Recently Solved",
-        ""
+        "",
     ]
+
+    icons = {
+        "Easy": "🟢",
+        "Medium": "🟡",
+        "Hard": "🔴",
+    }
 
     for problem in problems[:limit]:
 
-        difficulty = problem.difficulty
-
-        icon = {
-            "Easy": "🟢",
-            "Medium": "🟡",
-            "Hard": "🔴"
-        }.get(difficulty, "⚪")
+        icon = icons.get(
+            problem.difficulty,
+            "⚪",
+        )
 
         lines.append(
-            f"{icon} {problem.frontend_id}. {problem.title}<br>"
+            f"{icon} {problem.frontend_id}. {problem.title}"
         )
+
+        lines.append("")
 
     return "\n".join(lines)
-    
 
-def problem_distribution(problems):
 
-    counter = topic_distribution(problems)
+# ==========================================================
+# Topic Distribution
+# ==========================================================
 
-    if not counter:
-        return "## 📚 Problem Distribution\n\n_No data available._"
-
-    max_count = max(counter.values())
-    BAR_LENGTH = 15
-
-    lines = [
-        "## 📚 Problem Distribution",
-        "",
-        "```text"
-    ]
-
-    max_topic_length = max(len(topic) for topic in counter.keys())
-
-    total = len(problems)
-
-    for topic, count in sorted(
-        counter.items(),
-        key=lambda x: (-x[1], x[0]),
-    ):
-
-        percentage = count / total * 100
-
-        filled = max(
-            1,
-            int(count / max_count * BAR_LENGTH),
-        )
-
-        bar = "█" * filled
-
-        lines.append(
-            f"{topic:<{max_topic_length}}   "
-            f"{bar:<15} "
-            f"{count:>3} "
-            f"({percentage:4.1f}%)"
-        )
-
-    # Close the code block
-    lines.append("```")
-
-    # Return AFTER processing all topics
-    return "\n".join(lines)
-    
 def topic_distribution(problems):
     """
-    Count how many problems belong to each topic.
+    Count occurrences of every topic.
     """
 
     counter = Counter()
@@ -226,46 +201,130 @@ def topic_distribution(problems):
 
     return counter
 
-  
-# -----------------------------
+
+# ==========================================================
+# Problem Distribution
+# ==========================================================
+
+def problem_distribution(problems):
+    """
+    Generate the topic distribution section.
+    """
+
+    counter = topic_distribution(problems)
+
+    if not counter:
+        return "## 📚 Topic Distribution\n\n_No data available._"
+
+    total = len(problems)
+
+    max_count = max(counter.values())
+
+    max_topic = max(
+        len(topic)
+        for topic in counter
+    )
+
+    lines = [
+        "## 📚 Top Topics",
+        "",
+        "```text",
+    ]
+
+    for topic, count in sorted(
+        counter.items(),
+        key=lambda item: (-item[1], item[0]),
+    ):
+
+        percentage = count / total * 100
+
+        filled = max(
+            1,
+            int(
+                count / max_count * TOPIC_BAR_LENGTH
+            ),
+        )
+
+        bar = "█" * filled
+
+        lines.append(
+            f"{topic:<{max_topic}} "
+            f"{bar:<{TOPIC_BAR_LENGTH}} "
+            f"{count:>3} "
+            f"({percentage:4.1f}%)"
+        )
+
+    lines.append("```")
+
+    return "\n".join(lines)
+
+
+# ==========================================================
+# Footer
+# ==========================================================
+
+def build_footer():
+    """
+    Generate footer.
+    """
+
+    return (
+        "🕒 **Last Updated**\n\n"
+        + datetime.now(UTC).strftime("%d %b %Y • %H:%M UTC")
+    )
+
+
+# ==========================================================
+# Markdown Generator
+# ==========================================================
+
+def generate_markdown(stats, problems):
+    """
+    Generate the complete markdown section for README.
+    """
+
+    sections = [
+        build_leetcode_badge(stats),
+        build_difficulty(stats),
+        build_progress(stats),
+        build_ranking(stats),
+        problem_distribution(problems),
+        recently_solved(problems),
+        build_footer(),
+    ]
+
+    return "\n\n---\n\n".join(sections)
+
+
+# ==========================================================
 # README Updater
-# -----------------------------
-
-START_MARKER = "<!-- LEETCODE_STATS_START -->"
-END_MARKER = "<!-- LEETCODE_STATS_END -->"
-
+# ==========================================================
 
 def update_readme(markdown):
     """
-    Replace everything between the markers
-    in README.md with freshly generated markdown.
+    Replace everything between the README markers.
     """
 
-    readme_path = "README.md"
-
-    with open(readme_path, "r", encoding="utf-8") as file:
+    with open("README.md", "r", encoding="utf-8") as file:
         content = file.read()
 
     start = content.find(START_MARKER)
     end = content.find(END_MARKER)
 
     if start == -1 or end == -1:
-        raise Exception(
-            "README markers not found.\n"
-            "Please add:\n"
-            "<!-- LEETCODE_STATS_START -->\n"
-            "<!-- LEETCODE_STATS_END -->"
+        raise RuntimeError(
+            "README markers not found."
         )
 
     start += len(START_MARKER)
 
-    new_content = (
+    updated = (
         content[:start]
         + "\n\n"
         + markdown
-        + "\n"
+        + "\n\n"
         + content[end:]
     )
 
-    with open(readme_path, "w", encoding="utf-8") as file:
-        file.write(new_content)
+    with open("README.md", "w", encoding="utf-8") as file:
+        file.write(updated)
