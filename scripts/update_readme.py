@@ -1,6 +1,9 @@
 import os
 import json
-import requests
+from graphql import (
+    fetch_leetcode_stats,
+    fetch_problem_metadata,
+)
 from datetime import datetime, UTC
 
 from utils import (
@@ -23,43 +26,6 @@ CACHE_FILE = os.path.join(CACHE_DIR, "topics.json")
 USERNAME = os.getenv("LEETCODE_USERNAME")
 GOAL = 500
 
-GRAPHQL_URL = "https://leetcode.com/graphql"
-
-# -----------------------------
-# GraphQL Query
-# -----------------------------
-
-QUERY = """
-query getUserProfile($username: String!) {
-  matchedUser(username: $username) {
-
-    profile {
-      ranking
-    }
-
-    submitStats {
-      acSubmissionNum {
-        difficulty
-        count
-      }
-    }
-  }
-}
-"""
-
-QUESTION_QUERY = """
-query questionData($titleSlug: String!) {
-  question(titleSlug: $titleSlug) {
-    questionFrontendId
-    title
-    difficulty
-
-    topicTags {
-      name
-    }
-  }
-}
-"""
 
 def load_cache():
     """
@@ -86,61 +52,6 @@ def save_cache(cache):
 # Request Function
 # -----------------------------
 
-def fetch_leetcode_stats(username: str):
-    """
-    Fetch statistics from LeetCode GraphQL API.
-    """
-
-    response = requests.post(
-        GRAPHQL_URL,
-        json={
-            "query": QUERY,
-            "variables": {
-                "username": username
-            }
-        },
-        timeout=30,
-    )
-
-    response.raise_for_status()
-
-    data = response.json()
-
-    if "errors" in data:
-        raise Exception(data["errors"])
-
-    return data["data"]["matchedUser"]
-
-def fetch_problem_metadata(slug):
-
-    try:
-
-        response = requests.post(
-            GRAPHQL_URL,
-            json={
-                "query": QUESTION_QUERY,
-                "variables": {
-                    "titleSlug": slug
-                }
-            },
-            timeout=30,
-        )
-
-        response.raise_for_status()
-
-        data = response.json()
-
-        if "errors" in data:
-            print(f"LeetCode returned an error for '{slug}'.")
-            return None
-
-        return data["data"]["question"]
-
-    except requests.RequestException as e:
-
-        print(f"Failed to fetch '{slug}': {e}")
-
-        return None
 
 def update_topic_cache():
 
