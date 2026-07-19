@@ -732,5 +732,13 @@
             "Hash Table",
             "Union-Find"
         ]
+    },
+    "2177": {
+        "title": "Find Three Consecutive Integers That Sum to a Given Number",
+        "difficulty": "Medium",
+        "topics": [
+            "Math",
+            "Simulation"
+        ]
     }
 }

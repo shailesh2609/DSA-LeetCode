@@ -23,9 +23,9 @@
 | Difficulty | Solved |
 |------------|-------:|
 | 🟢 Easy | 26 |
-| 🟡 Medium | 37 |
+| 🟡 Medium | 38 |
 | 🔴 Hard | 1 |
-| ⭐ **Total** | **64** |
+| ⭐ **Total** | **65** |
 
 ---
 
@@ -33,13 +33,13 @@
 
 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
-**64 / 500 Problems (12.8%)**
+**65 / 500 Problems (13.0%)**
 
 ---
 
 ## 🌍 Global Ranking
 
-**2,229,614**
+**2,208,062**
 
 ---
 
@@ -50,10 +50,10 @@ Array                   ███████████████ 44
 String                  ██████████████  43
 Hash Table              ███████         21
 Two Pointers            ███████         21
+Math                    █████           17
 Sorting                 █████           17
-Math                    █████           16
 Binary Search           █████           15
-Simulation              ███             10
+Simulation              ███             11
 Matrix                  ███             9
 Stack                   ██              8
 Counting                █               5
@@ -82,7 +82,7 @@ Union-Find              █               1
 
 ---
 
-_Last Updated: 19 Jul 2026 01:43 UTC_
+_Last Updated: 19 Jul 2026 15:59 UTC_
 
 <!-- LEETCODE_STATS_END -->
 
