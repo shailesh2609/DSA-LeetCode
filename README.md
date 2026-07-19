@@ -28,24 +28,30 @@
 
 <!-- LEETCODE_STATS_START -->
 
+<p align="center">
+<img src="https://img.shields.io/badge/LeetCode-65%20Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=white"/>
+</p>
+
+---
 
 
-| Difficulty | Solved |
-|------------|-------:|
-| 🟢 Easy | 26 |
-| 🟡 Medium | 38 |
-| 🔴 Hard | 1 |
-| ⭐ **Total** | **65** |
+## 📈 Difficulty Breakdown
+
+🟢 Easy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;26
+
+🟡 Medium&nbsp;&nbsp;38
+
+🔴 Hard&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1
 
 
 ---
 
 
-## 🎯 Progress Towards Goal
+## 🎯 Progress
 
-🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
+██░░░░░░░░░░░░░░░░░░
 
-🎯 **65 / 500 Problems**
+**65 / 500 Problems**
 
 📈 **Completion:** 13.0%
 
@@ -60,48 +66,53 @@
 
 ---
 
-## 📚 Problem Distribution
+## 📚 Top Topics
 
 ```text
-Array                   ███████████████  35 (53.8%)
-String                  ████████████     30 (46.2%)
-Two Pointers            ███████          18 (27.7%)
-Hash Table              ██████           16 (24.6%)
-Math                    ██████           15 (23.1%)
-Sorting                 ██████           14 (21.5%)
-Binary Search           █████            13 (20.0%)
-Simulation              ███               7 (10.8%)
-Matrix                  ██                6 ( 9.2%)
-Stack                   █                 4 ( 6.2%)
-Bit Manipulation        █                 3 ( 4.6%)
-Counting                █                 3 ( 4.6%)
-Greedy                  █                 3 ( 4.6%)
-Heap (Priority Queue)   █                 3 ( 4.6%)
-Sliding Window          █                 3 ( 4.6%)
-Divide and Conquer      █                 2 ( 3.1%)
-Dynamic Programming     █                 2 ( 3.1%)
-Prefix Sum              █                 2 ( 3.1%)
-Number Theory           █                 1 ( 1.5%)
-String Matching         █                 1 ( 1.5%)
-Trie                    █                 1 ( 1.5%)
-Union-Find              █                 1 ( 1.5%)
+Array                 ███████████████  35 (53.8%)
+String                ████████████     30 (46.2%)
+Two Pointers          ███████          18 (27.7%)
+Hash Table            ██████           16 (24.6%)
+Math                  ██████           15 (23.1%)
+Sorting               ██████           14 (21.5%)
+Binary Search         █████            13 (20.0%)
+Simulation            ███               7 (10.8%)
+Matrix                ██                6 ( 9.2%)
+Stack                 █                 4 ( 6.2%)
+Bit Manipulation      █                 3 ( 4.6%)
+Counting              █                 3 ( 4.6%)
+Greedy                █                 3 ( 4.6%)
+Heap (Priority Queue) █                 3 ( 4.6%)
+Sliding Window        █                 3 ( 4.6%)
+Divide and Conquer    █                 2 ( 3.1%)
+Dynamic Programming   █                 2 ( 3.1%)
+Prefix Sum            █                 2 ( 3.1%)
+Number Theory         █                 1 ( 1.5%)
+String Matching       █                 1 ( 1.5%)
+Trie                  █                 1 ( 1.5%)
+Union-Find            █                 1 ( 1.5%)
 ```
 
 ---
 
-## 🔥 Recently Solved Problems
+## 🔥 Recently Solved
 
-🟡 2177. Find Three Consecutive Integers That Sum to a Given Number<br>
-🟡 128. Longest Consecutive Sequence<br>
-🟡 16. 3Sum Closest<br>
-🟡 15. 3Sum<br>
-🟢 13. Roman to Integer<br>
+🟡 2177. Find Three Consecutive Integers That Sum to a Given Number
+
+🟡 128. Longest Consecutive Sequence
+
+🟡 16. 3Sum Closest
+
+🟡 15. 3Sum
+
+🟢 13. Roman to Integer
+
 
 ---
 
-🕒 Last Updated
+🕒 **Last Updated**
 
-19 Jul 2026 • 22:57 UTC
+19 Jul 2026 • 23:25 UTC
 
 <!-- LEETCODE_STATS_END -->
 
