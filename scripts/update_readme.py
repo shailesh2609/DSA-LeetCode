@@ -10,7 +10,11 @@ from utils import (
     get_last_commit_timestamp,
     problem_title,
 )
-
+from markdown import (
+    parse_stats,
+    generate_markdown,
+    update_readme,
+)
 
 # -----------------------------
 # Configuration
