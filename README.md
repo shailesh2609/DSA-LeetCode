@@ -37,10 +37,12 @@
 ## 📈 Difficulty Breakdown
 
 ```text
-🟢 Easy    ██████████      26
-🟡 Medium  ███████████████ 38
-🔴 Hard    █               1
-```
+🟢 Easy      ██████████            26
+
+🟡 Medium    ███████████████       38
+
+🔴 Hard      █                      1
+
 
 ---
 
@@ -103,22 +105,22 @@ Union-Find            █                 1 ( 1.5%)
 
 ## 🔥 Recently Solved
 
-🟡 [2177. Find Three Consecutive Integers That Sum to a Given Number](https://leetcode.com/problems/find-three-consecutive-integers-that-sum-to-a-given-number/)
+🟡 2177. [Find Three Consecutive Integers That Sum to a Given Number](https://leetcode.com/problems/find-three-consecutive-integers-that-sum-to-a-given-number/)
 
-🟡 [128. Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
+🟡 128. [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
 
-🟡 [16. 3Sum Closest](https://leetcode.com/problems/3sum-closest/)
+🟡 16. [3Sum Closest](https://leetcode.com/problems/3sum-closest/)
 
-🟡 [15. 3Sum](https://leetcode.com/problems/3sum/)
+🟡 15. [3Sum](https://leetcode.com/problems/3sum/)
 
-🟢 [13. Roman to Integer](https://leetcode.com/problems/roman-to-integer/)
+🟢 13. [Roman to Integer](https://leetcode.com/problems/roman-to-integer/)
 
 
 ---
 
 🕒 **Last Updated**
 
-19 Jul 2026 • 23:36 UTC
+19 Jul 2026 • 23:41 UTC
 
 <!-- LEETCODE_STATS_END -->
 
