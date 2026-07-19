@@ -132,13 +132,6 @@ def recently_solved(problems, limit=5):
         reverse=True,
     )
 
-    for problem in problems[:10]:
-        print(
-            problem.frontend_id,
-            problem.title,
-            get_last_commit_timestamp(problem.folder),
-        )
-
     lines = [
         "## 🔥 Recently Solved",
         ""
