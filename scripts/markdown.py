@@ -7,7 +7,7 @@ from repository import get_last_commit_timestamp
 # Parse Response
 # -----------------------------
 
-GOAL = 500
+from config import GOAL
 
 def parse_stats(user_data):
     """
