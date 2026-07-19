@@ -99,7 +99,7 @@ def progress_bar(current, goal, width=20):
 # Markdown Generator
 # -----------------------------
 
-def generate_markdown(stats, cache):
+def generate_markdown(stats, problems):
 
     percentage = stats["total"] / GOAL * 100
 
@@ -129,11 +129,11 @@ def generate_markdown(stats, cache):
 
 ---
 
-{problem_distribution(cache)}
+{problem_distribution(problems)}
 
 ---
 
-{recently_solved(cache)}
+{recently_solved(problems)}
 
 ---
 
@@ -180,9 +180,9 @@ def recently_solved(cache, limit=5):
     
 from collections import Counter
 
-def problem_distribution(cache):
+def problem_distribution(problems):
 
-    counter = topic_distribution(cache)
+    counter = topic_distribution(problems)
 
     if not counter:
         return "## 📚 Problem Distribution\n\n_No data available._"
@@ -214,16 +214,16 @@ def problem_distribution(cache):
     # Return AFTER processing all topics
     return "\n".join(lines)
     
-def topic_distribution(cache):
+def topic_distribution(problems):
     """
     Count how many problems belong to each topic.
     """
 
     counter = Counter()
 
-    for problem in cache.values():
+    for problem in problems:
 
-        for topic in problem["topics"]:
+        for topic in problem.topics:
 
             counter[topic] += 1
 
@@ -295,7 +295,7 @@ def main():
 
     cache = update_topic_cache(verified_problems)
 
-    markdown = generate_markdown(stats, cache)
+    markdown = generate_markdown(stats, verified_problems)
 
     update_readme(markdown)
 
