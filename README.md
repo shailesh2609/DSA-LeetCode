@@ -80,15 +80,15 @@ Union-Find              █                 1 ( 1.5%)
 
 ## 🔥 Recently Solved
 
-🟢 #1 Two Sum<br>
-🟡 #3 Longest Substring Without Repeating Characters<br>
-🔴 #4 Median of Two Sorted Arrays<br>
-🟡 #5 Longest Palindromic Substring<br>
-🟡 #6 Zigzag Conversion<br>
+🟡 #2177 Find Three Consecutive Integers That Sum to a Given Number<br>
+🟡 #128 Longest Consecutive Sequence<br>
+🟡 #16 3Sum Closest<br>
+🟡 #15 3Sum<br>
+🟢 #13 Roman to Integer<br>
 
 ---
 
-_Last Updated: 19 Jul 2026 22:50 UTC_
+_Last Updated: 19 Jul 2026 22:54 UTC_
 
 <!-- LEETCODE_STATS_END -->
 
