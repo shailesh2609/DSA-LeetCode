@@ -46,24 +46,24 @@
 ## 📚 Problem Distribution
 
 ```text
-Array                   ███████████████ 44
-String                  ██████████████  43
-Hash Table              ███████         21
-Two Pointers            ███████         21
-Math                    █████           17
-Sorting                 █████           17
-Binary Search           █████           15
-Simulation              ███             11
-Matrix                  ███             9
-Stack                   ██              8
-Counting                █               5
-Heap (Priority Queue)   █               5
-Bit Manipulation        █               4
-Greedy                  █               4
-Prefix Sum              █               3
+Array                   ███████████████ 35
+String                  ████████████    30
+Two Pointers            ███████         18
+Hash Table              ██████          16
+Math                    ██████          15
+Sorting                 ██████          14
+Binary Search           █████           13
+Simulation              ███             7
+Matrix                  ██              6
+Stack                   █               4
+Bit Manipulation        █               3
+Counting                █               3
+Greedy                  █               3
+Heap (Priority Queue)   █               3
 Sliding Window          █               3
 Divide and Conquer      █               2
 Dynamic Programming     █               2
+Prefix Sum              █               2
 Number Theory           █               1
 String Matching         █               1
 Trie                    █               1
@@ -82,7 +82,7 @@ Union-Find              █               1
 
 ---
 
-_Last Updated: 19 Jul 2026 16:23 UTC_
+_Last Updated: 19 Jul 2026 21:28 UTC_
 
 <!-- LEETCODE_STATS_END -->
 
