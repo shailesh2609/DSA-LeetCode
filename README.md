@@ -43,6 +43,7 @@
 
 🔴 Hard      █                      1
 
+```
 
 ---
 
@@ -120,7 +121,7 @@ Union-Find            █                 1 ( 1.5%)
 
 🕒 **Last Updated**
 
-19 Jul 2026 • 23:41 UTC
+19 Jul 2026 • 23:46 UTC
 
 <!-- LEETCODE_STATS_END -->
 
