@@ -143,13 +143,12 @@ _Last Updated: {datetime.now(UTC).strftime("%d %b %Y %H:%M UTC")}_
     return markdown
 
 
-def recently_solved(cache, limit=5):
+def recently_solved(problems, limit=5):
 
-    folders = get_problem_folders()
-
-    folders.sort(
-        key=get_last_commit_timestamp,
-        reverse=True
+    problems = sorted(
+        problems,
+        key=lambda p: get_last_commit_timestamp(p.folder),
+        reverse=True,
     )
 
     lines = [
@@ -157,16 +156,9 @@ def recently_solved(cache, limit=5):
         ""
     ]
 
-    for folder in folders[:limit]:
+    for problem in problems[:limit]:
 
-        pid = extract_problem_id(folder)
-
-        data = cache.get(pid)
-
-        if not data:
-            continue
-
-        difficulty = data["difficulty"]
+        difficulty = problem.difficulty
 
         icon = {
             "Easy": "🟢",
@@ -174,7 +166,7 @@ def recently_solved(cache, limit=5):
             "Hard": "🔴"
         }.get(difficulty, "⚪")
 
-        lines.append(f"{icon} {data['title']}<br>")
+        lines.append(f"{icon} {problem.title}<br>")
 
     return "\n".join(lines)
     
