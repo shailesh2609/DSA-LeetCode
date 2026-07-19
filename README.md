@@ -23,9 +23,9 @@
 | Difficulty | Solved |
 |------------|-------:|
 | 🟢 Easy | 26 |
-| 🟡 Medium | 36 |
+| 🟡 Medium | 37 |
 | 🔴 Hard | 1 |
-| ⭐ **Total** | **63** |
+| ⭐ **Total** | **64** |
 
 ---
 
@@ -33,23 +33,23 @@
 
 🟩🟩⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜⬜
 
-**63 / 500 Problems (12.6%)**
+**64 / 500 Problems (12.8%)**
 
 ---
 
 ## 🌍 Global Ranking
 
-**2,227,930**
+**2,229,614**
 
 ---
 
 ## 📚 Problem Distribution
 
 ```text
-Array                   ███████████████ 43
-String                  ███████████████ 43
+Array                   ███████████████ 44
+String                  ██████████████  43
+Hash Table              ███████         21
 Two Pointers            ███████         21
-Hash Table              ██████          20
 Sorting                 █████           17
 Math                    █████           16
 Binary Search           █████           15
@@ -67,6 +67,7 @@ Dynamic Programming     █               2
 Number Theory           █               1
 String Matching         █               1
 Trie                    █               1
+Union-Find              █               1
 ```
 
 ---
@@ -81,7 +82,7 @@ Trie                    █               1
 
 ---
 
-_Last Updated: 18 Jul 2026 01:26 UTC_
+_Last Updated: 19 Jul 2026 01:43 UTC_
 
 <!-- LEETCODE_STATS_END -->
 
