@@ -15,10 +15,6 @@ from markdown import (
 # -----------------------------
 
 from config import USERNAME
-GOAL = 500
-
-
-
 
 # -----------------------------
 # Main
