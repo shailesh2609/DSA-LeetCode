@@ -48,38 +48,69 @@ def parse_stats(user_data):
 def progress_bar(current, goal, width=20):
     filled = int((current / goal) * width)
     return "🟩" * filled + "⬜" * (width - filled)
-  
-# -----------------------------
-# Markdown Generator
-# -----------------------------
+    
 
-def generate_markdown(stats, problems):
+def build_stats_table(stats):
 
-    percentage = stats["total"] / GOAL * 100
-
-    bar = progress_bar(stats["total"], GOAL)
-
-    markdown = f"""
+    return f"""
 | Difficulty | Solved |
 |------------|-------:|
 | 🟢 Easy | {stats['easy']} |
 | 🟡 Medium | {stats['medium']} |
 | 🔴 Hard | {stats['hard']} |
 | ⭐ **Total** | **{stats['total']}** |
+"""
 
----
+def build_progress(stats):
 
+    percentage = stats["total"] / GOAL * 100
+
+    bar = progress_bar(
+        stats["total"],
+        GOAL,
+    )
+
+    return f"""
 ### 🎯 Progress
 
 {bar}
 
 **{stats['total']} / {GOAL} Problems ({percentage:.1f}%)**
+"""
 
----
+def build_ranking(stats):
 
+    return f"""
 ## 🌍 Global Ranking
 
 **{stats['ranking']:,}**
+"""
+
+def build_footer():
+
+    return (
+        "_Last Updated: "
+        + datetime.now(UTC).strftime("%d %b %Y %H:%M UTC")
+        + "_"
+    )
+    
+    
+# -----------------------------
+# Markdown Generator
+# -----------------------------
+
+def generate_markdown(stats, problems):
+
+    return f"""
+{build_stats_table(stats)}
+
+---
+
+{build_progress(stats)}
+
+---
+
+{build_ranking(stats)}
 
 ---
 
@@ -91,10 +122,8 @@ def generate_markdown(stats, problems):
 
 ---
 
-_Last Updated: {datetime.now(UTC).strftime("%d %b %Y %H:%M UTC")}_
+{build_footer()}
 """
-
-    return markdown
 
 
 def recently_solved(problems, limit=5):
