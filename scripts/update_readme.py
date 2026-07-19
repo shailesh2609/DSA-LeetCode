@@ -1,8 +1,4 @@
 import os
-from cache import (
-    load_cache,
-    save_cache,
-)
 from graphql import (
     fetch_leetcode_stats,
 )
@@ -23,33 +19,6 @@ from utils import (
 USERNAME = os.getenv("LEETCODE_USERNAME")
 GOAL = 500
 
-
-# -----------------------------
-# Request Function
-# -----------------------------
-
-
-def update_topic_cache(verified_problems):
-
-    cache = load_cache()
-
-    updated = False
-
-    for problem in verified_problems:
-
-        cache[problem.frontend_id] = {
-            "title": problem.title,
-            "difficulty": problem.difficulty,
-            "topics": problem.topics,
-        }
-
-        updated = True
-
-    if updated:
-        save_cache(cache)
-        print("Cache saved.")
-
-    return cache
 
 # -----------------------------
 # Parse Response
@@ -285,9 +254,10 @@ def main():
 
     verified_problems = verify_problem_folders()
 
-    cache = update_topic_cache(verified_problems)
-
-    markdown = generate_markdown(stats, verified_problems)
+    markdown = generate_markdown(
+        stats,
+        verified_problems,
+    )
 
     update_readme(markdown)
 
