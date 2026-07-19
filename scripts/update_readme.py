@@ -1,7 +1,6 @@
-import os
-from graphql import (
-    fetch_leetcode_stats,
-)
+from config import USERNAME
+
+from graphql import fetch_leetcode_stats
 from verifier import verify_problem_folders
 
 from markdown import (
@@ -11,38 +10,38 @@ from markdown import (
 )
 
 # -----------------------------
-# Configuration
-# -----------------------------
-
-from config import USERNAME
-
-# -----------------------------
 # Main
 # -----------------------------
 
 def main():
 
     if not USERNAME:
-        raise Exception(
+        raise RuntimeError(
             "Repository Variable LEETCODE_USERNAME not found."
         )
 
-    print(f"Fetching LeetCode stats for {USERNAME}...")
+    print(f"Fetching LeetCode stats for '{USERNAME}'...")
 
     user = fetch_leetcode_stats(USERNAME)
 
     stats = parse_stats(user)
 
-    verified_problems = verify_problem_folders()
+    print("Verifying repository...")
+
+    problems = verify_problem_folders()
+
+    print(f"Verified {len(problems)} problems.")
 
     markdown = generate_markdown(
         stats,
-        verified_problems,
+        problems,
     )
+
+    print("Updating README...")
 
     update_readme(markdown)
 
-    print("README updated successfully.")
+    print("Done ✅")
 
 
 # -----------------------------
