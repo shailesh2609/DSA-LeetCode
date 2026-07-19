@@ -10,34 +10,43 @@ from utils import (
 
 def verify_problem_folders():
     """
-    Verify every problem folder and return the verified metadata.
+    Verify every LeetCode problem folder.
+
+    - Renames folders if LeetSync generated an incorrect ID.
+    - Returns a list of verified Problem objects.
     """
 
     print("\nVerifying problem folders...\n")
 
-    verified_problems = []
+    problems = []
 
     for folder in get_problem_folders():
 
         slug = folder_to_slug(folder)
+        folder_id = extract_problem_id(folder)
 
         metadata = fetch_problem_metadata(slug)
 
         if metadata is None:
-            print(f"Skipping {folder}")
+            print(f"Skipping '{folder}' (metadata not found).")
             continue
 
-        official_id = metadata["questionFrontendId"]
+        frontend_id = metadata["questionFrontendId"]
+        title = metadata["title"]
+        difficulty = metadata["difficulty"]
 
-        if extract_problem_id(folder) != official_id:
+        topics = [
+            tag["name"]
+            for tag in metadata["topicTags"]
+        ]
 
-            correct_folder = (
-                f"{official_id}-{slug}"
+        if folder_id != frontend_id:
+
+            correct_folder = f"{frontend_id}-{slug}"
+
+            print(
+                f"Renamed: {folder} -> {correct_folder}"
             )
-
-            print(f"Renaming:")
-            print(f"  {folder}")
-            print(f"  → {correct_folder}\n")
 
             rename_problem_folder(
                 folder,
@@ -46,20 +55,17 @@ def verify_problem_folders():
 
             folder = correct_folder
 
-        verified_problems.append(
+        problems.append(
             Problem(
-                frontend_id=official_id,
-                title=metadata["title"],
-                difficulty=metadata["difficulty"],
-                topics=[
-                    tag["name"]
-                    for tag in metadata["topicTags"]
-                ],
+                frontend_id=frontend_id,
+                title=title,
+                difficulty=difficulty,
+                topics=topics,
                 folder=folder,
                 slug=slug,
             )
         )
 
-    print("Folder verification complete.\n")
+    print(f"\nVerified {len(problems)} problems.\n")
 
-    return verified_problems
+    return problems
