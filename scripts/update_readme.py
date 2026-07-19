@@ -3,13 +3,7 @@ from graphql import (
     fetch_leetcode_stats,
 )
 from verifier import verify_problem_folders
-from datetime import datetime, UTC
 
-from utils import (
-    get_problem_folders,
-    get_last_commit_timestamp,
-    problem_title,
-)
 from markdown import (
     parse_stats,
     generate_markdown,
