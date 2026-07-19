@@ -34,27 +34,17 @@ GOAL = 500
 # -----------------------------
 
 
-def update_topic_cache():
+def update_topic_cache(verified_problems):
 
     cache = load_cache()
 
-    folders = get_problem_folders()
-
     updated = False
 
-    for folder in sorted(folders, key=problem_number):
+    for problem in verified_problems:
 
-        print(f"Processing: {folder}")
+        folder = problem["folder"]
 
-        print(f"Fetching metadata for {folder}")
-
-        metadata = fetch_problem_metadata(
-            folder_to_slug(folder)
-        )
-
-        if metadata is None:
-            print(f"Skipping {folder}: metadata not found.")
-            continue
+        metadata = problem["metadata"]
 
         official_id = metadata["questionFrontendId"]
 
@@ -316,9 +306,9 @@ def main():
 
     stats = parse_stats(user)
 
-    verify_problem_folders()
+    verified_problems = verify_problem_folders()
 
-    cache = update_topic_cache()
+    cache = update_topic_cache(verified_problems)
 
     markdown = generate_markdown(stats, cache)
 
