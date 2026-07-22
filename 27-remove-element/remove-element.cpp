@@ -9,7 +9,6 @@ public:
         }
         else if(nums[start] == val){
             swap(nums[start], nums[end]);
-            start ++;
             end--;
         }
         else{
