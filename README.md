@@ -29,7 +29,7 @@
 <!-- LEETCODE_STATS_START -->
 
 <p align="center">
-<img src="https://img.shields.io/badge/LeetCode-65%20Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=white"/>
+<img src="https://img.shields.io/badge/LeetCode-67%20Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=white"/>
 </p>
 
 ---
@@ -37,7 +37,7 @@
 ## 📈 Difficulty Breakdown
 
 ```text
-🟢 Easy      ██████████            26
+🟢 Easy      ███████████           28
 
 🟡 Medium    ███████████████       38
 
@@ -52,9 +52,9 @@
 
 ██░░░░░░░░░░░░░░░░░░
 
-**65 / 500 Problems**
+**67 / 500 Problems**
 
-📈 **Completion:** 13.0%
+📈 **Completion:** 13.4%
 
 
 ---
@@ -62,7 +62,7 @@
 
 ## 🌍 Global Rank
 
-🏅 **2,186,438**
+🏅 **2,188,380**
 
 
 ---
@@ -70,30 +70,30 @@
 ## 📚 Top Topics
 
 ```text
-Array                 ███████████████  35 (53.8%)
-String                ████████████     30 (46.2%)
-Two Pointers          ███████          18 (27.7%)
-Hash Table            ██████           16 (24.6%)
-Math                  ██████           15 (23.1%)
-Sorting               ██████           14 (21.5%)
-Binary Search         █████            13 (20.0%)
-Simulation            ███               7 (10.8%)
-Matrix                ██                6 ( 9.2%)
-Stack                 █                 4 ( 6.2%)
+Array                 ███████████████  37 (55.2%)
+String                ████████████     30 (44.8%)
+Two Pointers          ███████          19 (28.4%)
+Hash Table            ██████           16 (23.9%)
+Math                  ██████           15 (22.4%)
+Sorting               █████            14 (20.9%)
+Binary Search         █████            13 (19.4%)
+Simulation            ██                7 (10.4%)
+Matrix                ██                6 ( 9.0%)
+Stack                 █                 4 ( 6.0%)
 ```
 
 <details>
 <summary><b>Show Complete Topic Distribution</b></summary>
 
 ```text
-Bit Manipulation      █                 3 ( 4.6%)
-Counting              █                 3 ( 4.6%)
-Greedy                █                 3 ( 4.6%)
-Heap (Priority Queue) █                 3 ( 4.6%)
-Sliding Window        █                 3 ( 4.6%)
-Divide and Conquer    █                 2 ( 3.1%)
-Dynamic Programming   █                 2 ( 3.1%)
-Prefix Sum            █                 2 ( 3.1%)
+Bit Manipulation      █                 3 ( 4.5%)
+Counting              █                 3 ( 4.5%)
+Greedy                █                 3 ( 4.5%)
+Heap (Priority Queue) █                 3 ( 4.5%)
+Sliding Window        █                 3 ( 4.5%)
+Divide and Conquer    █                 2 ( 3.0%)
+Dynamic Programming   █                 2 ( 3.0%)
+Prefix Sum            █                 2 ( 3.0%)
 Number Theory         █                 1 ( 1.5%)
 String Matching       █                 1 ( 1.5%)
 Trie                  █                 1 ( 1.5%)
@@ -106,6 +106,8 @@ Union-Find            █                 1 ( 1.5%)
 
 ## 🔥 Recently Solved
 
+🟢 27. [Remove Element](https://leetcode.com/problems/remove-element/)
+
 🟡 2177. [Find Three Consecutive Integers That Sum to a Given Number](https://leetcode.com/problems/find-three-consecutive-integers-that-sum-to-a-given-number/)
 
 🟡 128. [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/)
@@ -114,14 +116,12 @@ Union-Find            █                 1 ( 1.5%)
 
 🟡 15. [3Sum](https://leetcode.com/problems/3sum/)
 
-🟢 13. [Roman to Integer](https://leetcode.com/problems/roman-to-integer/)
-
 
 ---
 
 🕒 **Last Updated**
 
-21 Jul 2026 • 01:43 UTC
+22 Jul 2026 • 01:42 UTC
 
 <!-- LEETCODE_STATS_END -->
 
