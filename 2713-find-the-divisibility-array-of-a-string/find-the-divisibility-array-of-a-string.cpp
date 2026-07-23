@@ -2,18 +2,13 @@ class Solution {
 public:
 vector<int> divisibilityArray(string word, int m) {
     int n = word.size();
-    vector<int>ans;
+    vector<int>ans(n, 0);
 
     long long rem = 0;
     for(int i = 0; i < n; i++){
-        rem = rem*10 + (word[i]- '0') ;
-        if(rem % m == 0){
-            ans.push_back(1);
-        }
-        else{
-            ans.push_back(0);
-        } 
-        rem = rem % m;
+        rem = (rem*10 + (word[i]- '0')) % m ;
+        if(rem == 0) ans[i] = 1;
+        else ans[i] = 0; 
     }
     return ans;
 }
