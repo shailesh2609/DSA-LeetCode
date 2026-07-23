@@ -62,7 +62,7 @@
 
 ## 🌍 Global Rank
 
-🏅 **2,188,380**
+🏅 **2,145,383**
 
 
 ---
@@ -106,6 +106,8 @@ Union-Find            █                 1 ( 1.5%)
 
 ## 🔥 Recently Solved
 
+🟢 1470. [Shuffle the Array](https://leetcode.com/problems/shuffle-the-array/)
+
 🟢 27. [Remove Element](https://leetcode.com/problems/remove-element/)
 
 🟡 2177. [Find Three Consecutive Integers That Sum to a Given Number](https://leetcode.com/problems/find-three-consecutive-integers-that-sum-to-a-given-number/)
@@ -114,14 +116,12 @@ Union-Find            █                 1 ( 1.5%)
 
 🟡 16. [3Sum Closest](https://leetcode.com/problems/3sum-closest/)
 
-🟡 15. [3Sum](https://leetcode.com/problems/3sum/)
-
 
 ---
 
 🕒 **Last Updated**
 
-22 Jul 2026 • 01:42 UTC
+23 Jul 2026 • 01:50 UTC
 
 <!-- LEETCODE_STATS_END -->
 
