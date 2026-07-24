@@ -29,7 +29,7 @@
 <!-- LEETCODE_STATS_START -->
 
 <p align="center">
-<img src="https://img.shields.io/badge/LeetCode-67%20Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=white"/>
+<img src="https://img.shields.io/badge/LeetCode-69%20Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=white"/>
 </p>
 
 ---
@@ -37,9 +37,9 @@
 ## 📈 Difficulty Breakdown
 
 ```text
-🟢 Easy      ███████████           28
+🟢 Easy      ███████████           29
 
-🟡 Medium    ███████████████       38
+🟡 Medium    ███████████████       39
 
 🔴 Hard      █                      1
 
@@ -52,9 +52,9 @@
 
 ██░░░░░░░░░░░░░░░░░░
 
-**67 / 500 Problems**
+**69 / 500 Problems**
 
-📈 **Completion:** 13.4%
+📈 **Completion:** 13.8%
 
 
 ---
@@ -62,7 +62,7 @@
 
 ## 🌍 Global Rank
 
-🏅 **2,145,383**
+🏅 **2,147,303**
 
 
 ---
@@ -70,34 +70,34 @@
 ## 📚 Top Topics
 
 ```text
-Array                 ███████████████  37 (55.2%)
-String                ████████████     30 (44.8%)
-Two Pointers          ███████          19 (28.4%)
-Hash Table            ██████           16 (23.9%)
-Math                  ██████           15 (22.4%)
-Sorting               █████            14 (20.9%)
-Binary Search         █████            13 (19.4%)
-Simulation            ██                7 (10.4%)
-Matrix                ██                6 ( 9.0%)
-Stack                 █                 4 ( 6.0%)
+Array                 ███████████████  38 (55.1%)
+String                ████████████     32 (46.4%)
+Two Pointers          ███████          19 (27.5%)
+Hash Table            ██████           16 (23.2%)
+Math                  ██████           16 (23.2%)
+Sorting               █████            14 (20.3%)
+Binary Search         █████            13 (18.8%)
+Simulation            ██                7 (10.1%)
+Matrix                ██                6 ( 8.7%)
+Stack                 █                 4 ( 5.8%)
 ```
 
 <details>
 <summary><b>Show Complete Topic Distribution</b></summary>
 
 ```text
-Bit Manipulation      █                 3 ( 4.5%)
-Counting              █                 3 ( 4.5%)
-Greedy                █                 3 ( 4.5%)
-Heap (Priority Queue) █                 3 ( 4.5%)
-Sliding Window        █                 3 ( 4.5%)
-Divide and Conquer    █                 2 ( 3.0%)
-Dynamic Programming   █                 2 ( 3.0%)
-Prefix Sum            █                 2 ( 3.0%)
-Number Theory         █                 1 ( 1.5%)
-String Matching       █                 1 ( 1.5%)
-Trie                  █                 1 ( 1.5%)
-Union-Find            █                 1 ( 1.5%)
+Bit Manipulation      █                 3 ( 4.3%)
+Counting              █                 3 ( 4.3%)
+Greedy                █                 3 ( 4.3%)
+Heap (Priority Queue) █                 3 ( 4.3%)
+Sliding Window        █                 3 ( 4.3%)
+Divide and Conquer    █                 2 ( 2.9%)
+Dynamic Programming   █                 2 ( 2.9%)
+Prefix Sum            █                 2 ( 2.9%)
+Number Theory         █                 1 ( 1.4%)
+String Matching       █                 1 ( 1.4%)
+Trie                  █                 1 ( 1.4%)
+Union-Find            █                 1 ( 1.4%)
 ```
 
 </details>
@@ -121,7 +121,7 @@ Union-Find            █                 1 ( 1.5%)
 
 🕒 **Last Updated**
 
-23 Jul 2026 • 01:50 UTC
+24 Jul 2026 • 01:46 UTC
 
 <!-- LEETCODE_STATS_END -->
 
