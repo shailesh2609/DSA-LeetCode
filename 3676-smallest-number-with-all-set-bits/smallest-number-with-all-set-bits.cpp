@@ -1,17 +1,16 @@
 class Solution {
 public:
     int smallestNumber(int n) {
-    int countSetBits = 1;
-    
-    while(n/2 > 0){
-        countSetBits++;
-        n=n/2;
-    }
-    
-    int ans = 0;
-    for(int i = 0; i < countSetBits; i++){
-        ans = ans +  pow(2,i);
-    }
-    return ans;
+        int ans = -1;
+
+        int index = 0;
+        int  num = n;
+        while(num != 0){
+            num = num >> 1;
+            index++;
+            if(index == 1) ans = 2;
+            else ans*=2;
+        }
+    return ans-1;
 }
 };
