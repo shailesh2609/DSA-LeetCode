@@ -8,23 +8,9 @@ public:
         n=n/2;
     }
     
-    int ans = n;
-    while(true){
-        n = ans;
-        int index = 0;
-        while(n > 0){
-            if(n % 2 == 1){
-                index++;
-            }
-            n = n/2;
-        }
-        if(countSetBits != index){
-            ans++;
-            continue;
-        }
-        else{
-            break;
-        }
+    int ans = 0;
+    for(int i = 0; i < countSetBits; i++){
+        ans = ans +  pow(2,i);
     }
     return ans;
 }
