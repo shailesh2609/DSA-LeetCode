@@ -1,14 +1,8 @@
 class Solution {
 public:
-   int sum(vector<int>nums){
-    int sum = 0;
-    for(int ch : nums){
-        sum += ch;
+    int addedInteger(vector<int>& nums1, vector<int>& nums2) {
+        int min1=*min_element(nums1.begin(),nums1.end());
+        int min2=*min_element(nums2.begin(),nums2.end());
+        return min2-min1;
     }
-    return sum;
-}
-int addedInteger(vector<int>& nums1, vector<int>& nums2) {
-    int n = nums1.size();
-    return (sum(nums2) - sum(nums1))/n;
-}
 };
