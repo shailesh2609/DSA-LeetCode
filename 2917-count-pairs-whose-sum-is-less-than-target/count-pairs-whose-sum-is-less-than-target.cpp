@@ -4,15 +4,16 @@ public:
     sort(nums.begin(), nums.end());
     int count = 0;
 
-    for(int i=0; i< nums.size()- 1; i++) {
-        for(int j= i+1; j < nums.size(); j++) {
-            if(nums[j] + nums[i] < target){
-                count ++; 
+    int i = 0;
+    int j = nums.size()-1;
+    while(i<j){            
+        if(nums[j] + nums[i] < target){
+                count += j - i; 
+                i++;
             }
             else{
-                break;
+                j--;
             }
-        }
     } 
     return count;
 }
