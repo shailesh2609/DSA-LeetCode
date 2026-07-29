@@ -62,7 +62,7 @@
 
 ## 🌍 Global Rank
 
-🏅 **1,990,976**
+🏅 **1,936,419**
 
 
 ---
@@ -70,16 +70,16 @@
 ## 📚 Top Topics
 
 ```text
-Array                 ███████████████  44 (56.4%)
-String                ██████████       32 (41.0%)
-Two Pointers          ███████          21 (26.9%)
-Math                  ██████           18 (23.1%)
-Hash Table            █████            17 (21.8%)
-Sorting               █████            17 (21.8%)
-Binary Search         ████             14 (17.9%)
-Simulation            ██                7 ( 9.0%)
-Bit Manipulation      ██                6 ( 7.7%)
-Matrix                ██                6 ( 7.7%)
+Array                 ███████████████  45 (57.0%)
+String                ██████████       32 (40.5%)
+Two Pointers          ███████          21 (26.6%)
+Hash Table            ██████           18 (22.8%)
+Math                  ██████           18 (22.8%)
+Sorting               ██████           18 (22.8%)
+Binary Search         ████             14 (17.7%)
+Simulation            ██                7 ( 8.9%)
+Bit Manipulation      ██                6 ( 7.6%)
+Matrix                ██                6 ( 7.6%)
 ```
 
 <details>
@@ -92,8 +92,8 @@ Dynamic Programming   █                 3 ( 3.8%)
 Greedy                █                 3 ( 3.8%)
 Heap (Priority Queue) █                 3 ( 3.8%)
 Sliding Window        █                 3 ( 3.8%)
-Divide and Conquer    █                 2 ( 2.6%)
-Prefix Sum            █                 2 ( 2.6%)
+Divide and Conquer    █                 2 ( 2.5%)
+Prefix Sum            █                 2 ( 2.5%)
 Number Theory         █                 1 ( 1.3%)
 String Matching       █                 1 ( 1.3%)
 Trie                  █                 1 ( 1.3%)
@@ -106,22 +106,22 @@ Union-Find            █                 1 ( 1.3%)
 
 ## 🔥 Recently Solved
 
+🟢 2824. [Count Pairs Whose Sum is Less than Target](https://leetcode.com/problems/count-pairs-whose-sum-is-less-than-target/)
+
+🟢 3731. [Find Missing Elements](https://leetcode.com/problems/find-missing-elements/)
+
+🟢 3731. [Find Missing Elements](https://leetcode.com/problems/find-missing-elements/)
+
 🟢 461. [Hamming Distance](https://leetcode.com/problems/hamming-distance/)
 
 🟢 3131. [Find the Integer Added to Array I](https://leetcode.com/problems/find-the-integer-added-to-array-i/)
-
-🟢 3151. [Special Array I](https://leetcode.com/problems/special-array-i/)
-
-🟢 3370. [Smallest Number With All Set Bits](https://leetcode.com/problems/smallest-number-with-all-set-bits/)
-
-🟢 121. [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)
 
 
 ---
 
 🕒 **Last Updated**
 
-28 Jul 2026 • 01:30 UTC
+29 Jul 2026 • 01:41 UTC
 
 <!-- LEETCODE_STATS_END -->
 
