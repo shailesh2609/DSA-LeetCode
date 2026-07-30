@@ -2,18 +2,19 @@ class Solution {
 public:
     vector<int> intersection(vector<int>& nums1, vector<int>& nums2) {
     vector<int>ans;
-    bool checkExistence[1001] = {false}; 
+    unordered_set<int>st1;
+    unordered_set<int>st2;
     for(int num:nums1){
-        if(!checkExistence[num]){
-            checkExistence[num] = true;
-        }
-    }
+        st1.insert(num);
+    } 
     for(int num:nums2){
-        if(checkExistence[num]){
+        st2.insert(num);
+    } 
+    for(int num:st1){
+        if(st2.find(num) != st2.end()){
             ans.push_back(num);
-            checkExistence[num] = false;
         }
-    }
-    return ans;   
+    }   
+    return ans;       
 }
 };
