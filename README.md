@@ -62,7 +62,7 @@
 
 ## 🌍 Global Rank
 
-🏅 **1,904,626**
+🏅 **1,889,004**
 
 
 ---
@@ -106,6 +106,8 @@ Union-Find            █                 1 ( 1.2%)
 
 ## 🔥 Recently Solved
 
+🟢 1. [Two Sum](https://leetcode.com/problems/two-sum/)
+
 🟢 349. [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)
 
 🟡 2161. [Partition Array According to Given Pivot](https://leetcode.com/problems/partition-array-according-to-given-pivot/)
@@ -114,14 +116,12 @@ Union-Find            █                 1 ( 1.2%)
 
 🟢 3731. [Find Missing Elements](https://leetcode.com/problems/find-missing-elements/)
 
-🟢 2824. [Count Pairs Whose Sum is Less than Target](https://leetcode.com/problems/count-pairs-whose-sum-is-less-than-target/)
-
 
 ---
 
 🕒 **Last Updated**
 
-31 Jul 2026 • 01:50 UTC
+01 Aug 2026 • 01:51 UTC
 
 <!-- LEETCODE_STATS_END -->
 
