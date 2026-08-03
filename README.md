@@ -62,7 +62,7 @@
 
 ## 🌍 Global Rank
 
-🏅 **1,890,402**
+🏅 **1,891,938**
 
 
 ---
@@ -121,7 +121,7 @@ Union-Find            █                 1 ( 1.2%)
 
 🕒 **Last Updated**
 
-02 Aug 2026 • 01:48 UTC
+03 Aug 2026 • 01:50 UTC
 
 <!-- LEETCODE_STATS_END -->
 
