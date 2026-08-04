@@ -29,7 +29,7 @@
 <!-- LEETCODE_STATS_START -->
 
 <p align="center">
-<img src="https://img.shields.io/badge/LeetCode-81%20Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=white"/>
+<img src="https://img.shields.io/badge/LeetCode-82%20Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=white"/>
 </p>
 
 ---
@@ -37,9 +37,9 @@
 ## 📈 Difficulty Breakdown
 
 ```text
-🟢 Easy      ██████████████        39
+🟢 Easy      █████████████         39
 
-🟡 Medium    ███████████████       41
+🟡 Medium    ███████████████       42
 
 🔴 Hard      █                      1
 
@@ -52,9 +52,9 @@
 
 ███░░░░░░░░░░░░░░░░░
 
-**81 / 500 Problems**
+**82 / 500 Problems**
 
-📈 **Completion:** 16.2%
+📈 **Completion:** 16.4%
 
 
 ---
@@ -62,7 +62,7 @@
 
 ## 🌍 Global Rank
 
-🏅 **1,891,938**
+🏅 **1,893,562**
 
 
 ---
@@ -70,34 +70,49 @@
 ## 📚 Top Topics
 
 ```text
-Array                 ███████████████  46 (56.8%)
-String                ██████████       32 (39.5%)
-Two Pointers          ███████          23 (28.4%)
-Math                  ██████           19 (23.5%)
-Hash Table            █████            18 (22.2%)
-Sorting               █████            18 (22.2%)
-Binary Search         ████             15 (18.5%)
-Simulation            ██                8 ( 9.9%)
-Bit Manipulation      █                 6 ( 7.4%)
-Matrix                █                 6 ( 7.4%)
+Array                               ███████████████  47 (57.3%)
+String                              ██████████       32 (39.0%)
+Two Pointers                        ███████          23 (28.0%)
+Math                                ██████           20 (24.4%)
+Hash Table                          █████            18 (22.0%)
+Sorting                             █████            18 (22.0%)
+Binary Search                       ████             15 (18.3%)
+Simulation                          ██                8 ( 9.8%)
+Bit Manipulation                    █                 6 ( 7.3%)
+Matrix                              █                 6 ( 7.3%)
 ```
 
 <details>
 <summary><b>Show Complete Topic Distribution</b></summary>
 
 ```text
-Stack                 █                 4 ( 4.9%)
-Counting              █                 3 ( 3.7%)
-Dynamic Programming   █                 3 ( 3.7%)
-Greedy                █                 3 ( 3.7%)
-Heap (Priority Queue) █                 3 ( 3.7%)
-Sliding Window        █                 3 ( 3.7%)
-Divide and Conquer    █                 2 ( 2.5%)
-Prefix Sum            █                 2 ( 2.5%)
-Number Theory         █                 1 ( 1.2%)
-String Matching       █                 1 ( 1.2%)
-Trie                  █                 1 ( 1.2%)
-Union-Find            █                 1 ( 1.2%)
+Stack                               █                 4 ( 4.9%)
+Counting                            █                 3 ( 3.7%)
+Dynamic Programming                 █                 3 ( 3.7%)
+Greedy                              █                 3 ( 3.7%)
+Heap (Priority Queue)               █                 3 ( 3.7%)
+Sliding Window                      █                 3 ( 3.7%)
+Divide and Conquer                  █                 2 ( 2.4%)
+Number Theory                       █                 2 ( 2.4%)
+Prefix Sum                          █                 2 ( 2.4%)
+Primality Test                      █                 2 ( 2.4%)
+Boyer–Moore Majority Vote Algorithm █                 1 ( 1.2%)
+Boyer–Moore String-Search Algorithm █                 1 ( 1.2%)
+Bubble Sort                         █                 1 ( 1.2%)
+Enumeration                         █                 1 ( 1.2%)
+Floyd's Cycle Finding Algorithm     █                 1 ( 1.2%)
+Knuth–Morris–Pratt Algorithm        █                 1 ( 1.2%)
+Manacher                            █                 1 ( 1.2%)
+Newton's Method                     █                 1 ( 1.2%)
+Pigeonhole Principle                █                 1 ( 1.2%)
+Prime Number Sieve                  █                 1 ( 1.2%)
+Quicksort                           █                 1 ( 1.2%)
+Sieve Theory                        █                 1 ( 1.2%)
+String Matching                     █                 1 ( 1.2%)
+Ternary Search                      █                 1 ( 1.2%)
+Trie                                █                 1 ( 1.2%)
+Union-Find                          █                 1 ( 1.2%)
+Z Algorithm                         █                 1 ( 1.2%)
 ```
 
 </details>
@@ -105,6 +120,8 @@ Union-Find            █                 1 ( 1.2%)
 ---
 
 ## 🔥 Recently Solved
+
+🟡 204. [Count Primes](https://leetcode.com/problems/count-primes/)
 
 🟢 1. [Two Sum](https://leetcode.com/problems/two-sum/)
 
@@ -114,14 +131,12 @@ Union-Find            █                 1 ( 1.2%)
 
 🟢 3099. [Harshad Number](https://leetcode.com/problems/harshad-number/)
 
-🟢 3731. [Find Missing Elements](https://leetcode.com/problems/find-missing-elements/)
-
 
 ---
 
 🕒 **Last Updated**
 
-03 Aug 2026 • 01:50 UTC
+04 Aug 2026 • 01:26 UTC
 
 <!-- LEETCODE_STATS_END -->
 
