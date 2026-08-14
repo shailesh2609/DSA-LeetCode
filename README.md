@@ -62,7 +62,7 @@
 
 ## 🌍 Global Rank
 
-🏅 **1,890,816**
+🏅 **1,892,459**
 
 
 ---
@@ -136,7 +136,7 @@ Z Algorithm                         █                 1 ( 1.2%)
 
 🕒 **Last Updated**
 
-13 Aug 2026 • 01:04 UTC
+14 Aug 2026 • 01:03 UTC
 
 <!-- LEETCODE_STATS_END -->
 
