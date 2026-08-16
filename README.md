@@ -29,7 +29,7 @@
 <!-- LEETCODE_STATS_START -->
 
 <p align="center">
-<img src="https://img.shields.io/badge/LeetCode-82%20Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=white"/>
+<img src="https://img.shields.io/badge/LeetCode-84%20Solved-FFA116?style=for-the-badge&logo=leetcode&logoColor=white"/>
 </p>
 
 ---
@@ -37,7 +37,7 @@
 ## 📈 Difficulty Breakdown
 
 ```text
-🟢 Easy      █████████████         39
+🟢 Easy      ██████████████        41
 
 🟡 Medium    ███████████████       42
 
@@ -52,9 +52,9 @@
 
 ███░░░░░░░░░░░░░░░░░
 
-**82 / 500 Problems**
+**84 / 500 Problems**
 
-📈 **Completion:** 16.4%
+📈 **Completion:** 16.8%
 
 
 ---
@@ -62,7 +62,7 @@
 
 ## 🌍 Global Rank
 
-🏅 **1,893,845**
+🏅 **1,895,019**
 
 
 ---
@@ -70,29 +70,30 @@
 ## 📚 Top Topics
 
 ```text
-Array                               ███████████████  47 (57.3%)
-String                              ██████████       32 (39.0%)
-Two Pointers                        ███████          23 (28.0%)
-Math                                ██████           20 (24.4%)
-Hash Table                          █████            18 (22.0%)
-Sorting                             █████            18 (22.0%)
-Binary Search                       ████             15 (18.3%)
-Simulation                          ██                8 ( 9.8%)
-Bit Manipulation                    █                 6 ( 7.3%)
-Matrix                              █                 6 ( 7.3%)
+Array                               ███████████████  47 (56.0%)
+String                              ██████████       32 (38.1%)
+Two Pointers                        ███████          23 (27.4%)
+Math                                ███████          22 (26.2%)
+Hash Table                          █████            18 (21.4%)
+Sorting                             █████            18 (21.4%)
+Binary Search                       ████             15 (17.9%)
+Simulation                          ██                8 ( 9.5%)
+Bit Manipulation                    █                 6 ( 7.1%)
+Matrix                              █                 6 ( 7.1%)
 ```
 
 <details>
 <summary><b>Show Complete Topic Distribution</b></summary>
 
 ```text
-Stack                               █                 4 ( 4.9%)
-Counting                            █                 3 ( 3.7%)
-Dynamic Programming                 █                 3 ( 3.7%)
-Greedy                              █                 3 ( 3.7%)
-Heap (Priority Queue)               █                 3 ( 3.7%)
-Sliding Window                      █                 3 ( 3.7%)
+Dynamic Programming                 █                 5 ( 6.0%)
+Stack                               █                 4 ( 4.8%)
+Counting                            █                 3 ( 3.6%)
+Greedy                              █                 3 ( 3.6%)
+Heap (Priority Queue)               █                 3 ( 3.6%)
+Sliding Window                      █                 3 ( 3.6%)
 Divide and Conquer                  █                 2 ( 2.4%)
+Memoization                         █                 2 ( 2.4%)
 Number Theory                       █                 2 ( 2.4%)
 Prefix Sum                          █                 2 ( 2.4%)
 Primality Test                      █                 2 ( 2.4%)
@@ -107,6 +108,7 @@ Newton's Method                     █                 1 ( 1.2%)
 Pigeonhole Principle                █                 1 ( 1.2%)
 Prime Number Sieve                  █                 1 ( 1.2%)
 Quicksort                           █                 1 ( 1.2%)
+Recursion                           █                 1 ( 1.2%)
 Sieve Theory                        █                 1 ( 1.2%)
 String Matching                     █                 1 ( 1.2%)
 Ternary Search                      █                 1 ( 1.2%)
@@ -121,6 +123,8 @@ Z Algorithm                         █                 1 ( 1.2%)
 
 ## 🔥 Recently Solved
 
+🟢 70. [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
+
 🟡 204. [Count Primes](https://leetcode.com/problems/count-primes/)
 
 🟢 1. [Two Sum](https://leetcode.com/problems/two-sum/)
@@ -129,14 +133,12 @@ Z Algorithm                         █                 1 ( 1.2%)
 
 🟡 2161. [Partition Array According to Given Pivot](https://leetcode.com/problems/partition-array-according-to-given-pivot/)
 
-🟢 3099. [Harshad Number](https://leetcode.com/problems/harshad-number/)
-
 
 ---
 
 🕒 **Last Updated**
 
-15 Aug 2026 • 00:37 UTC
+16 Aug 2026 • 00:39 UTC
 
 <!-- LEETCODE_STATS_END -->
 
