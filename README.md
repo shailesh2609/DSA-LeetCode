@@ -62,7 +62,7 @@
 
 ## 🌍 Global Rank
 
-🏅 **1,895,019**
+🏅 **1,862,892**
 
 
 ---
@@ -123,6 +123,8 @@ Z Algorithm                         █                 1 ( 1.2%)
 
 ## 🔥 Recently Solved
 
+🟢 509. [Fibonacci Number](https://leetcode.com/problems/fibonacci-number/)
+
 🟢 70. [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
 
 🟡 204. [Count Primes](https://leetcode.com/problems/count-primes/)
@@ -131,14 +133,12 @@ Z Algorithm                         █                 1 ( 1.2%)
 
 🟢 349. [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/)
 
-🟡 2161. [Partition Array According to Given Pivot](https://leetcode.com/problems/partition-array-according-to-given-pivot/)
-
 
 ---
 
 🕒 **Last Updated**
 
-16 Aug 2026 • 00:39 UTC
+17 Aug 2026 • 00:38 UTC
 
 <!-- LEETCODE_STATS_END -->
 
